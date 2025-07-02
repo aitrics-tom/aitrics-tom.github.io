@@ -16,7 +16,143 @@ pagination:
     after: 3 # The number of links after the current page
 ---
 
-<div class="post">
+<div class="post blog-yellow-theme">
+
+<style>
+.yellow-gradients-handwriting {
+  font-family: 'Dancing Script', 'Pacifico', cursive !important;
+  font-size: 6rem !important;
+  font-weight: 700 !important;
+  color: #FFD700 !important;
+  text-shadow: 
+    0 0 10px rgba(255, 215, 0, 0.5),
+    0 0 20px rgba(255, 215, 0, 0.3),
+    2px 2px 4px rgba(0, 0, 0, 0.2) !important;
+  letter-spacing: 0.05em !important;
+  background: linear-gradient(135deg, #FFD700 0%, #FFA500 50%, #FF8C00 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  animation: yellowGlow 3s ease-in-out infinite alternate !important;
+  transform: rotate(-1deg) !important;
+  display: inline-block !important;
+  margin: 1rem 0 !important;
+  text-align: center !important;
+}
+
+@keyframes yellowGlow {
+  0% {
+    filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.5));
+    transform: rotate(-1deg) scale(1);
+  }
+  100% {
+    filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.8));
+    transform: rotate(-0.5deg) scale(1.02);
+  }
+}
+
+.blog-yellow-theme {
+  background: linear-gradient(135deg, #FFFBF0 0%, #FFF8E1 100%) !important;
+  padding: 2rem 1rem !important;
+  border-radius: 1rem !important;
+}
+
+.blog-yellow-theme .header-bar {
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(255, 165, 0, 0.05) 100%) !important;
+  padding: 2rem 1rem !important;
+  border-radius: 1rem !important;
+  margin-bottom: 2rem !important;
+  border: 2px solid rgba(255, 215, 0, 0.2) !important;
+  box-shadow: 0 4px 20px rgba(255, 215, 0, 0.1) !important;
+}
+
+.blog-yellow-theme .header-bar h2 {
+  color: #B8860B !important;
+  font-style: italic !important;
+  font-size: 1.4rem !important;
+  text-align: center !important;
+}
+
+@media (max-width: 768px) {
+  .yellow-gradients-handwriting {
+    font-size: 4rem !important;
+    letter-spacing: 0.02em !important;
+  }
+}
+
+.blog-yellow-theme .post-list li {
+  background: rgba(255, 255, 255, 0.8) !important;
+  border: 1px solid rgba(255, 215, 0, 0.3) !important;
+  border-radius: 1rem !important;
+  padding: 2rem !important;
+  margin-bottom: 2rem !important;
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.1) !important;
+  transition: all 0.3s ease !important;
+}
+
+.blog-yellow-theme .post-list li:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 8px 25px rgba(255, 215, 0, 0.2) !important;
+  border-color: rgba(255, 165, 0, 0.5) !important;
+}
+
+.blog-yellow-theme .post-list .post-title {
+  color: #B8860B !important;
+  font-weight: 700 !important;
+}
+
+.blog-yellow-theme .post-list .post-title:hover {
+  color: #DAA520 !important;
+}
+
+.blog-yellow-theme .post-list .post-meta,
+.blog-yellow-theme .post-list .post-tags {
+  color: #CD853F !important;
+}
+
+.blog-yellow-theme .post-list .post-meta a,
+.blog-yellow-theme .post-list .post-tags a {
+  color: #B8860B !important;
+}
+
+.blog-yellow-theme .post-list .post-meta a:hover,
+.blog-yellow-theme .post-list .post-tags a:hover {
+  color: #DAA520 !important;
+}
+
+.blog-yellow-theme .tag-category-list {
+  background: rgba(255, 215, 0, 0.1) !important;
+  padding: 1rem !important;
+  border-radius: 0.5rem !important;
+  border: 1px solid rgba(255, 215, 0, 0.3) !important;
+  margin-bottom: 2rem !important;
+}
+
+.blog-yellow-theme .tag-category-list a {
+  color: #B8860B !important;
+  font-weight: 600 !important;
+}
+
+.blog-yellow-theme .tag-category-list a:hover {
+  color: #DAA520 !important;
+  text-decoration: underline !important;
+}
+
+.blog-yellow-theme .featured-posts .card {
+  background: rgba(255, 255, 255, 0.9) !important;
+  border: 1px solid rgba(255, 215, 0, 0.3) !important;
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.1) !important;
+}
+
+.blog-yellow-theme .featured-posts .card:hover {
+  border-color: rgba(255, 165, 0, 0.5) !important;
+  box-shadow: 0 8px 25px rgba(255, 215, 0, 0.2) !important;
+}
+
+.blog-yellow-theme .featured-posts .card-title {
+  color: #B8860B !important;
+}
+</style>
 
 {% assign blog_name_size = site.blog_name | size %}
 {% assign blog_description_size = site.blog_description | size %}
@@ -24,7 +160,7 @@ pagination:
 {% if blog_name_size > 0 or blog_description_size > 0 %}
 
   <div class="header-bar">
-    <h1 class="nav-logo-script" style="font-size:5rem; color:#ffd600; text-shadow:none; text-align:center; margin:0 auto 0.5em auto; display:block;">Yellow Gradients</h1>
+    <h1 class="yellow-gradients-handwriting">Yellow Gradients</h1>
     <h2>{{ site.blog_description }}</h2>
   </div>
   {% endif %}
