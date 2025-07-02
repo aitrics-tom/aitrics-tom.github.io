@@ -19,39 +19,19 @@ pagination:
 <div class="post blog-theme-reset">
 
 <style>
-/* Yellow Gradients 제목만 노랑색으로 유지, Bebas Neue 폰트 적용 */
+/* Yellow Gradients 제목 - 단순 노랑색 단색 */
 .yellow-gradients-handwriting {
   font-family: 'Bebas Neue', 'Arial Black', sans-serif !important;
   font-size: 6rem !important;
   font-weight: 400 !important;
   color: #FFD700 !important;
-  text-shadow: 
-    0 0 10px rgba(255, 215, 0, 0.5),
-    0 0 20px rgba(255, 215, 0, 0.3),
-    2px 2px 4px rgba(0, 0, 0, 0.2) !important;
   letter-spacing: 0.1em !important;
-  background: linear-gradient(135deg, #FFD700 0%, #FFA500 50%, #FF8C00 100%) !important;
-  -webkit-background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-  background-clip: text !important;
-  animation: yellowGlow 3s ease-in-out infinite alternate !important;
   display: inline-block !important;
   margin: 1rem 0 !important;
   text-align: center !important;
 }
 
-@keyframes yellowGlow {
-  0% {
-    filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.5));
-    transform: scale(1);
-  }
-  100% {
-    filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.8));
-    transform: scale(1.02);
-  }
-}
-
-/* 네비게이션 바 Yellow Gradients 브랜드 흰색으로 */
+/* 네비게이션 바 Yellow Gradients 브랜드 흰색 단색 */
 .yellow-gradients-brand {
   font-family: 'Bebas Neue', 'Arial Black', sans-serif !important;
   color: white !important;
