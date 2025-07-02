@@ -3,7 +3,7 @@ layout: page
 title: Photo Gallery
 permalink: /gallery/
 description: 일상과 연구의 순간들을 담은 사진첩
-nav: true
+nav: false
 nav_order: 7
 ---
 

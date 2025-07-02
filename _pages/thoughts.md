@@ -3,7 +3,7 @@ layout: page
 title: AI Thoughts
 permalink: /thoughts/
 description: 논문과 강의를 통해 얻은 AI에 대한 생각들
-nav: true
+nav: false
 nav_order: 8
 ---
 
