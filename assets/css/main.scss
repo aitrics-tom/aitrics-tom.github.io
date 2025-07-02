@@ -29,3 +29,27 @@ $max-content-width: {{ site.max_width }};
   font-weight: bold;
   letter-spacing: 1px;
 }
+
+/* 모든 Yellow Gradients를 Bebas Neue 폰트로 적용 */
+.yellow-gradients-brand,
+.nav-logo-script,
+.yellow-gradients-handwriting {
+  font-family: 'Bebas Neue', 'Arial Black', sans-serif !important;
+}
+
+/* 네비게이션 바 Yellow Gradients 브랜드 흰색 */
+.navbar-brand.yellow-gradients-brand {
+  color: white !important;
+  font-size: 1.5rem !important;
+  letter-spacing: 0.05em !important;
+}
+
+/* 네비게이션 링크 기본 스타일 (bold 제거) */
+.navbar-nav .nav-link {
+  font-weight: normal !important;
+}
+
+/* 현재 페이지만 bold */
+.navbar-nav .nav-item.active .nav-link {
+  font-weight: bold !important;
+}
