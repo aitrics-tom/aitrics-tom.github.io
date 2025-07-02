@@ -38,10 +38,22 @@ $max-content-width: {{ site.max_width }};
 }
 
 /* 네비게이션 바 Yellow Gradients 브랜드 흰색 단색 */
-.navbar-brand.yellow-gradients-brand {
+.navbar-brand.yellow-gradients-brand,
+.navbar-brand.nav-logo-script,
+a.navbar-brand.yellow-gradients-brand,
+a.navbar-brand.nav-logo-script {
   color: white !important;
   font-size: 1.5rem !important;
   letter-spacing: 0.05em !important;
+  text-decoration: none !important;
+}
+
+.navbar-brand.yellow-gradients-brand:hover,
+.navbar-brand.nav-logo-script:hover,
+a.navbar-brand.yellow-gradients-brand:hover,
+a.navbar-brand.nav-logo-script:hover {
+  color: white !important;
+  text-decoration: none !important;
 }
 
 /* 네비게이션 링크 기본 스타일 (bold 제거) */

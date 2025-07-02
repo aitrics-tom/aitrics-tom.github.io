@@ -31,12 +31,30 @@ pagination:
   text-align: center !important;
 }
 
-/* 네비게이션 바 Yellow Gradients 브랜드 흰색 단색 */
-.yellow-gradients-brand {
+/* 네비게이션 바 Yellow Gradients 브랜드 흰색 단색 - 강제 적용 */
+.navbar-brand.yellow-gradients-brand,
+.navbar-brand.nav-logo-script,
+a.navbar-brand.yellow-gradients-brand,
+a.navbar-brand.nav-logo-script,
+.navbar-brand.title {
   font-family: 'Bebas Neue', 'Arial Black', sans-serif !important;
   color: white !important;
   font-size: 1.5rem !important;
   letter-spacing: 0.05em !important;
+  text-decoration: none !important;
+  background: none !important;
+  background-color: transparent !important;
+  -webkit-text-fill-color: white !important;
+}
+
+.navbar-brand.yellow-gradients-brand:hover,
+.navbar-brand.nav-logo-script:hover,
+a.navbar-brand.yellow-gradients-brand:hover,
+a.navbar-brand.nav-logo-script:hover,
+.navbar-brand.title:hover {
+  color: white !important;
+  text-decoration: none !important;
+  -webkit-text-fill-color: white !important;
 }
 
 /* 네비게이션 링크 기본 스타일 */
