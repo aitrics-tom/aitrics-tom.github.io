@@ -37,23 +37,56 @@ $max-content-width: {{ site.max_width }};
   font-family: 'Bebas Neue', 'Arial Black', sans-serif !important;
 }
 
-/* 네비게이션 바 Yellow Gradients 브랜드 흰색 단색 */
-.navbar-brand.yellow-gradients-brand,
-.navbar-brand.nav-logo-script,
-a.navbar-brand.yellow-gradients-brand,
-a.navbar-brand.nav-logo-script {
+/* 네비게이션 바 Yellow Gradients 브랜드 흰색 단색 - 모든 페이지 적용 */
+header .navbar-brand,
+header .navbar-brand.title,
+header .navbar-brand.nav-logo-script,
+header .navbar-brand.yellow-gradients-brand,
+header a.navbar-brand,
+header a.navbar-brand.title,
+header a.navbar-brand.nav-logo-script,
+header a.navbar-brand.yellow-gradients-brand,
+.navbar .navbar-brand,
+.navbar .navbar-brand.title,
+.navbar .navbar-brand.nav-logo-script,
+.navbar .navbar-brand.yellow-gradients-brand,
+.navbar a.navbar-brand,
+.navbar a.navbar-brand.title,
+.navbar a.navbar-brand.nav-logo-script,
+.navbar a.navbar-brand.yellow-gradients-brand {
+  font-family: 'Bebas Neue', 'Arial Black', sans-serif !important;
   color: white !important;
   font-size: 1.5rem !important;
   letter-spacing: 0.05em !important;
   text-decoration: none !important;
+  background: none !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  -webkit-text-fill-color: white !important;
+  -webkit-background-clip: initial !important;
+  background-clip: initial !important;
 }
 
-.navbar-brand.yellow-gradients-brand:hover,
-.navbar-brand.nav-logo-script:hover,
-a.navbar-brand.yellow-gradients-brand:hover,
-a.navbar-brand.nav-logo-script:hover {
+/* 호버 상태에서도 흰색 유지 */
+header .navbar-brand:hover,
+header .navbar-brand.title:hover,
+header .navbar-brand.nav-logo-script:hover,
+header .navbar-brand.yellow-gradients-brand:hover,
+header a.navbar-brand:hover,
+header a.navbar-brand.title:hover,
+header a.navbar-brand.nav-logo-script:hover,
+header a.navbar-brand.yellow-gradients-brand:hover,
+.navbar .navbar-brand:hover,
+.navbar .navbar-brand.title:hover,
+.navbar .navbar-brand.nav-logo-script:hover,
+.navbar .navbar-brand.yellow-gradients-brand:hover,
+.navbar a.navbar-brand:hover,
+.navbar a.navbar-brand.title:hover,
+.navbar a.navbar-brand.nav-logo-script:hover,
+.navbar a.navbar-brand.yellow-gradients-brand:hover {
   color: white !important;
   text-decoration: none !important;
+  -webkit-text-fill-color: white !important;
 }
 
 /* 네비게이션 링크 기본 스타일 (bold 제거) */
