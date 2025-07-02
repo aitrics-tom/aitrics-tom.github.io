@@ -6,7 +6,7 @@ subtitle: AI Researcher & Creative Thinker
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: prof_pic.jpeg
   image_circular: false
   more_info: >
     <p>Seoul, South Korea</p>
