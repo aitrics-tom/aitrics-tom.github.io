@@ -30,20 +30,6 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "nav-photo-gallery",
-          title: "Photo Gallery",
-          description: "일상과 연구의 순간들을 담은 사진첩",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/gallery/";
-          },
-        },{id: "nav-ai-thoughts",
-          title: "AI Thoughts",
-          description: "논문과 강의를 통해 얻은 AI에 대한 생각들",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/thoughts/";
-          },
         },{id: "post-a-post-with-plotly-js",
         
           title: "a post with plotly.js",
