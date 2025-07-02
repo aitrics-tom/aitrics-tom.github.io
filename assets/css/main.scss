@@ -23,3 +23,10 @@ $max-content-width: {{ site.max_width }};
   "tabler-icons/tabler-icons-filled.scss",
   "tabler-icons/tabler-icons-outline.scss"
 ;
+
+.yellow-gradient-title {
+  color: #ffe066 !important;
+  font-weight: bold;
+  letter-spacing: 1px;
+  /* 필요시 텍스트 그림자 등 추가 가능 */
+}

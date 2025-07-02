@@ -24,7 +24,7 @@ pagination:
 {% if blog_name_size > 0 or blog_description_size > 0 %}
 
   <div class="header-bar">
-    <h1>{{ site.blog_name }}</h1>
+    <h1 class="nav-logo-script" style="font-size:5rem; color:#ffd600; text-shadow:none; text-align:center; margin:0 auto 0.5em auto; display:block;">Yellow Gradients</h1>
     <h2>{{ site.blog_description }}</h2>
   </div>
   {% endif %}
