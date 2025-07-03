@@ -25,7 +25,7 @@ ninja.data = [{
           },
         },{id: "nav-cv",
           title: "cv",
-          description: "",
+          description: "AI Researcher specializing in Debiasing, Robustness, and Healthcare AI",
           section: "Navigation",
           handler: () => {
             window.location.href = "/cv/";
