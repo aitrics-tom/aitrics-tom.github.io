@@ -15,9 +15,14 @@ table.table-cv {
   }
 }
 
+// 진한 노란색 정의
+$cv-yellow: #FFA500; // 오렌지빛 진한 노란색
+$cv-dark-yellow: #FF8C00; // 더 진한 노란색 (호버용)
+
+// CV 버튼 스타일
 a.btncv {
-  color: var(--global-text-color) !important;
-  border: 1px solid var(--global-text-color) !important;
+  color: $cv-yellow !important;
+  border: 1px solid $cv-yellow !important;
   border-radius: 0.125rem;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -33,8 +38,8 @@ a.btncv {
 }
 
 a.btncv:hover {
-  color: var(--global-theme-color) !important;
-  border-color: var(--global-theme-color) !important;
+  color: $cv-dark-yellow !important;
+  border-color: $cv-dark-yellow !important;
   text-decoration: none !important;
 }
 
@@ -47,19 +52,20 @@ p.location {
   white-space: nowrap;
 }
 
+// 아이콘 색상도 진한 노란색으로
 i.iconlocation {
-  color: var(--global-text-color) !important;
+  color: $cv-yellow !important;
   font-size: 0.8rem;
 }
 
 i.iconinstitution {
-  color: var(--global-text-color) !important;
+  color: $cv-yellow !important;
   font-size: 0.95rem;
   margin-right: 0.3rem;
 }
 
 i.icondepartment {
-  color: var(--global-text-color) !important;
+  color: $cv-yellow !important;
   font-size: 0.8rem;
   margin-right: 0.3rem;
 }
@@ -115,13 +121,13 @@ div.list-group {
 }
 
 td.list-group-category {
-  color: var(--global-text-color) !important;
+  color: $cv-yellow !important;
   margin-bottom: 0.5rem;
 }
 
 td.list-group-category-icon {
   font-size: 0.8rem;
-  color: var(--global-text-color) !important;
+  color: $cv-yellow !important;
   width: 1.4rem;
   padding-right: 0.4rem;
 }
@@ -175,7 +181,7 @@ ul.timeline li {
 
 span.badge-toc {
   color: var(--global-bg-color);
-  background-color: var(--global-text-color) !important;
+  background-color: $cv-yellow !important;
   border-radius: 0.125rem;
   padding: 0.125rem 0.5rem 0.125rem 0.5rem;
   font-weight: 700 !important;
@@ -225,7 +231,7 @@ ul.timeline li::before {
   align-items: center;
   margin-bottom: 2rem;
   padding-bottom: 1rem;
-  border-bottom: 2px solid #e0e0e0;
+  border-bottom: 2px solid $cv-yellow;
   
   h1 {
     margin: 0;
@@ -268,7 +274,7 @@ ul.timeline li::before {
     }
     
     .card-title {
-      color: var(--global-text-color);
+      color: $cv-yellow;
       border-bottom: 2px solid #f0f0f0;
       padding-bottom: 0.5rem;
       margin-bottom: 1rem;
@@ -305,7 +311,7 @@ ul.timeline li::before {
       
       .label {
         font-size: 1.1rem;
-        color: var(--global-text-color);
+        color: $cv-yellow;
         margin-bottom: 1rem;
         font-weight: 500;
       }
@@ -328,19 +334,20 @@ ul.timeline li::before {
           gap: 0.5rem;
           
           i {
-            color: var(--global-text-color);
+            color: $cv-yellow;
             width: 1.2rem;
             text-align: center;
           }
         }
         
         a {
-          color: var(--global-text-color);
+          color: $cv-yellow;
           text-decoration: none;
           border-bottom: 1px solid transparent;
           
           &:hover {
-            border-bottom: 1px solid var(--global-text-color);
+            color: $cv-dark-yellow;
+            border-bottom: 1px solid $cv-dark-yellow;
           }
         }
       }
@@ -358,11 +365,42 @@ ul.timeline li::before {
       }
     }
   }
+  
+  // CV 페이지의 배지 색상을 진한 노란색으로 변경
+  .badge.danger-color-dark {
+    background-color: $cv-yellow !important;
+    color: white !important;
+    font-weight: 600 !important;
+  }
+  
+  // 링크 색상도 진한 노란색으로
+  a {
+    color: $cv-yellow;
+    text-decoration: none;
+    
+    &:hover {
+      color: $cv-dark-yellow;
+      text-decoration: underline;
+    }
+  }
+  
+  // 제목 색상
+  h6.title {
+    color: var(--global-text-color) !important;
+    
+    a {
+      color: $cv-yellow !important;
+      
+      &:hover {
+        color: $cv-dark-yellow !important;
+      }
+    }
+  }
 }
 
-// CV 페이지의 모든 섹션 제목을 검정색으로
+// CV 페이지의 모든 섹션 제목을 진한 노란색으로
 h3.card-title {
-  color: var(--global-text-color) !important;
+  color: $cv-yellow !important;
 }
 
 // time_table 스타일의 제목들도 검정색으로
