@@ -225,7 +225,7 @@ ul.timeline li::before {
   align-items: center;
   margin-bottom: 2rem;
   padding-bottom: 1rem;
-  border-bottom: 2px solid var(--yellow-primary);
+  border-bottom: 2px solid #e0e0e0;
   
   h1 {
     margin: 0;
@@ -268,7 +268,7 @@ ul.timeline li::before {
     }
     
     .card-title {
-      color: var(--global-theme-color);
+      color: var(--global-text-color);
       border-bottom: 2px solid #f0f0f0;
       padding-bottom: 0.5rem;
       margin-bottom: 1rem;
@@ -305,8 +305,9 @@ ul.timeline li::before {
       
       .label {
         font-size: 1.1rem;
-        color: var(--global-theme-color);
+        color: var(--global-text-color);
         margin-bottom: 1rem;
+        font-weight: 500;
       }
       
       .summary {
@@ -327,18 +328,19 @@ ul.timeline li::before {
           gap: 0.5rem;
           
           i {
-            color: var(--global-theme-color);
+            color: var(--global-text-color);
             width: 1.2rem;
             text-align: center;
           }
         }
         
         a {
-          color: var(--global-theme-color);
+          color: var(--global-text-color);
           text-decoration: none;
+          border-bottom: 1px solid transparent;
           
           &:hover {
-            text-decoration: underline;
+            border-bottom: 1px solid var(--global-text-color);
           }
         }
       }
