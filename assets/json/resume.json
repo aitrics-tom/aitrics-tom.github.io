@@ -1,200 +1,218 @@
 {
   "basics": {
-    "name": "Albert Einstein",
-    "label": "Scientist",
+    "name": "Sunguk Jang (장성욱)",
+    "label": "Medical AI Researcher",
     "image": "",
-    "email": "albert@einstein.de",
-    "phone": "(912) 123-4567",
-    "url": "https://alshedivat.github.io/al-folio/",
-    "summary": "A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time",
+    "email": "your-email@example.com",
+    "phone": "",
+    "url": "https://aitrics-tom.github.io",
+    "summary": "AI Researcher specializing in Debiasing, Robustness, and Healthcare AI. Focused on Long-tailed Learning, Spurious Correlations on EHR, and Domain Adaptation for medical applications.",
     "location": {
-      "address": "2712 Broadway St",
-      "postalCode": "CA 94115",
-      "city": "San Francisco",
-      "countryCode": "US",
-      "region": "California"
+      "address": "",
+      "postalCode": "",
+      "city": "Seoul",
+      "countryCode": "KR",
+      "region": "Republic of Korea"
     },
     "profiles": [
       {
-        "network": "Twitter",
-        "username": "AlbertEinstein",
-        "url": "https://twitter.com/AlbertEinstein"
+        "network": "GitHub",
+        "username": "aitrics-tom",
+        "url": "https://github.com/aitrics-tom"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "your-linkedin",
+        "url": "https://linkedin.com/in/your-profile"
       }
     ]
   },
   "work": [
     {
-      "name": "Institute for Advanced Study, Princeton University",
-      "position": "Professor of Theoretical Physics",
-      "url": "https://example.com",
-      "startDate": "1933-01-01",
-      "endDate": "1955-01-01",
-      "summary": "Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.",
-      "highlights": ["Relativity"]
+      "name": "AITRICS",
+      "position": "Medical AI Researcher",
+      "url": "https://aitrics.com",
+      "startDate": "2023-02-01",
+      "endDate": "",
+      "summary": "Specialized Research Personnel (Military Service Alternative: Mar 2023 - Mar 2026)",
+      "highlights": [
+        "Developed Target Domain-optimized Source Data Selection Algorithm for Disease Early Prediction Models",
+        "Improved Bidirectional LSTM model performance across multiple hospitals with enhanced AUROC, AUPRC, F1-score, and PPV metrics",
+        "Led Domain Adaptation research for EHR data, focusing on spurious correlation mitigation",
+        "Contributed to flagship product using Vital Signs and Lab test data for disease prediction"
+      ]
+    },
+    {
+      "name": "MLV Lab, Korea University",
+      "position": "Undergraduate Research Assistant",
+      "url": "",
+      "startDate": "2020-03-01",
+      "endDate": "2020-12-31",
+      "summary": "Conducted research on machine learning and computer vision",
+      "highlights": [
+        "Advised by Prof. Hyunwoo Kim"
+      ]
     }
   ],
   "volunteer": [
     {
-      "organization": "People's Climate March",
-      "location": "Zurich, Switzerland",
-      "position": "Lead Organizer",
-      "url": "https://example.com",
-      "startDate": "2014-04-01",
-      "endDate": "2015-07-01",
-      "summary": "Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.",
-      "highlights": ["Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march.", "Men of the year 2014 by Time magazine"]
+      "organization": "CVPR 2025",
+      "location": "",
+      "position": "Reviewer",
+      "url": "",
+      "startDate": "2024-01-01",
+      "endDate": "",
+      "summary": "Peer review for Computer Vision and Pattern Recognition conference",
+      "highlights": []
     }
   ],
   "education": [
     {
-      "institution": "University of Zurich, Zurich, Switzerland",
-      "location": "Zurich, Switzerland",
-      "url": "https://www.uzh.ch/",
-      "area": "Software Development",
-      "studyType": "PhD",
-      "startDate": "1905-01-01",
-      "endDate": "1905-01-01",
-      "score": "10",
-      "courses": ["Theory of Relativity"]
+      "institution": "Korea Advanced Institute of Science and Technology (KAIST)",
+      "location": "Daejeon, Republic of Korea",
+      "url": "https://www.kaist.ac.kr",
+      "area": "AI (Kim Jaechul Graduate School of AI)",
+      "studyType": "Master of Science",
+      "startDate": "2021-03-01",
+      "endDate": "2023-02-28",
+      "score": "",
+      "courses": [],
+      "thesis": "Decoupled Training for Long-Tailed Classification With Stochastic Representations",
+      "advisor": "Prof. Juho Lee (SIML Lab)"
+    },
+    {
+      "institution": "Korea University",
+      "location": "Seoul, Republic of Korea",
+      "url": "https://www.korea.edu",
+      "area": "Computer Science and Engineering (Double Major: Statistics)",
+      "studyType": "Bachelor of Science",
+      "startDate": "2017-03-01",
+      "endDate": "2021-02-28",
+      "score": "",
+      "courses": [],
+      "highlights": ["National Scholarship for Science and Engineering (2 years)"]
     }
   ],
   "awards": [
     {
-      "title": "Nobel Prize in Physics",
-      "date": "1921-11-01",
-      "awarder": "Royal Swedish Academy of Sciences",
-      "url": "https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/",
-      "summary": "The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'"
+      "title": "National Scholarship for Science and Engineering",
+      "date": "2019-2021",
+      "awarder": "Korea Student Aid Foundation",
+      "url": "",
+      "summary": "Full scholarship for 2 years during undergraduate studies"
+    },
+    {
+      "title": "SW Maestro 11th Generation",
+      "date": "2020",
+      "awarder": "Ministry of Science and ICT",
+      "url": "",
+      "summary": "Selected as SW Maestro training program participant"
     }
   ],
-  "certificates": [
-    {
-      "name": "Machine Learning",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-location-dot"
-    },
-    {
-      "name": "Quantum Computing",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-tag"
-    },
-    {
-      "name": "Quantum Information",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-envelope"
-    },
-    {
-      "name": "Quantum Cryptography",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-hashtag"
-    },
-    {
-      "name": "Quantum Communication",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-calendar"
-    },
-    {
-      "name": "Quantum Teleportation",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-clipboard-check"
-    }
-  ],
+  "certificates": [],
   "publications": [
     {
-      "name": "Zur Elektrody/namik bewegter Körper",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1905-06-30",
-      "url": "https://en.wikisource.org/wiki/Translation:On_the_Electrodynamics_of_Moving_Bodies",
-      "summary": "It concerned an interpretation of the Michelson–Morley experiment and the properties of light and time. Special relativity incorporates the principle that the speed of light is the same for all inertial observers regardless of the state of motion of the source."
+      "name": "Decoupled Training for Long-Tailed Classification With Stochastic Representations",
+      "publisher": "International Conference on Learning Representations (ICLR)",
+      "releaseDate": "2023",
+      "url": "",
+      "summary": "Co-first author, led research design and implementation"
     },
     {
-      "name": "Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1905-03-18",
-      "url": "https://de.wikisource.org/wiki/Über_einen_die_Erzeugung_und_Verwandlung_des_Lichtes_betreffenden_heuristischen_Gesichtspunkt",
-      "summary": "In the second paper, he applied the quantum theory to light to explain the photoelectric effect. In particular, he used the idea of light quanta (photons) to explain experimental results, but stressed the importance of the experimental results. The importance of his work on the photoelectric effect earned him the Nobel Prize in Physics in 1921."
-    },
-    {
-      "name": "Die Grundlage der allgemeinen Relativitätstheorie",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1916-03-20",
-      "url": "https://de.wikisource.org/wiki/Die_Grundlage_der_allgemeinen_Relativitätstheorie",
-      "summary": "The publication of the theory of general relativity made him internationally famous. He was professor of physics at the universities of Zurich (1909–1911) and Prague (1911–1912), before he returned to ETH Zurich (1912–1914)."
+      "name": "SC-LnD: Super-Class Learning & Pseudo-Label Debiasing Framework for Improved Long-Tailed Semi-Supervised Learning",
+      "publisher": "Under Review",
+      "releaseDate": "2024",
+      "url": "",
+      "summary": "Co-first author, research design and leadership"
     }
   ],
   "skills": [
     {
-      "name": "Physics",
-      "level": "Master",
-      "icon": "fa-solid fa-hashtag",
+      "name": "Programming Languages",
+      "level": "",
+      "icon": "fa-solid fa-code",
       "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
+        "Python (Intermediate)"
+      ]
+    },
+    {
+      "name": "Machine Learning & Deep Learning",
+      "level": "",
+      "icon": "fa-solid fa-brain",
+      "keywords": [
+        "PyTorch",
+        "Long-tailed Learning",
+        "Domain Adaptation",
+        "Debiasing",
+        "Healthcare AI"
+      ]
+    },
+    {
+      "name": "Tools & Platforms",
+      "level": "",
+      "icon": "fa-solid fa-tools",
+      "keywords": [
+        "Git",
+        "Docker",
+        "MLFlow",
+        "Gemini-CLI",
+        "Cursor"
+      ]
+    },
+    {
+      "name": "Research Areas",
+      "level": "",
+      "icon": "fa-solid fa-microscope",
+      "keywords": [
+        "Spurious Correlations on EHR",
+        "Robustness",
+        "Medical AI"
       ]
     }
   ],
   "languages": [
     {
-      "language": "German",
-      "fluency": "Native speaker",
+      "language": "Korean",
+      "fluency": "Native",
       "icon": ""
     },
     {
       "language": "English",
-      "fluency": "Fluent",
+      "fluency": "Professional Working Proficiency",
       "icon": ""
     }
   ],
   "interests": [
     {
-      "name": "Physics",
+      "name": "Primary Research Interests",
       "icon": "fa-solid fa-tag",
       "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
+        "Debiasing",
+        "Robustness",
+        "Healthcare AI"
+      ]
+    },
+    {
+      "name": "Specific Focus Areas",
+      "icon": "fa-solid fa-bullseye",
+      "keywords": [
+        "Long-tailed Learning",
+        "Spurious Correlations on EHR",
+        "Domain Adaptation on EHR"
       ]
     }
   ],
   "references": [
     {
-      "name": "Professor John Doe",
-      "icon": "fa-solid fa-laptop",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
+      "name": "Prof. Juho Lee",
+      "icon": "fa-solid fa-user-tie",
+      "reference": "Advisor, KAIST SIML Lab"
     },
     {
-      "name": "Professor John Doe",
-      "icon": "fa-solid fa-thumbtack",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
+      "name": "Prof. Hyunwoo Kim",
+      "icon": "fa-solid fa-user-tie",
+      "reference": "Undergraduate Research Advisor, Korea University MLV Lab"
     }
   ],
-  "projects": [
-    {
-      "name": "Quantum Computing",
-      "summary": "Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.",
-      "highlights": ["Quantum Teleportation", "Quantum Cryptography"],
-      "startDate": "2018-01-01",
-      "endDate": "2018-01-01",
-      "url": "https://example.com"
-    }
-  ]
+  "projects": []
 }
