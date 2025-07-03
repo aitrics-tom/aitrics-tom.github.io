@@ -1,29 +1,74 @@
-<table class="table table-cv table-sm table-borderless table-responsive">
-  {% for content in entry.contents %}
-    <tr>
-      <td class="p-1 pr-2 font-weight-bold">
-        <b>{{ content.name }}</b>
-      </td>
-      {% if content.value %}
-        <td class="p-1 pl-2 font-weight-light text">{{ content.value }}</td>
+{% if entry.title == "About" %}
+  <div class="about-section">
+    {% for content in entry.contents %}
+      {% if content.name == "image" %}
+        <div class="profile-image">
+          <img src="{{ content.value | prepend: '/assets/img/' | relative_url }}" alt="Profile" class="{{ content.class }}">
+        </div>
       {% endif %}
-      {% if content.links %}
-        <td class="p-1 pl-2 font-weight-light text">
-          <div class="container-pdf">
-            {% for item in content.links %}
-              {% if item.link %}
-                <div class="container-link-button">
-                  {% if item.name %}
-                    <a href="{{ item.link }}" target="_blank" class="btncv z-depth-0">{{ item.name }}</a>
-                  {% else %}
-                    <a href="{{ item.link }}" target="_blank" class="btncv z-depth-0">doc</a>
-                  {% endif %}
-                </div>
-              {% endif %}
-            {% endfor %}
-          </div>
+    {% endfor %}
+    <div class="about-content">
+      {% for content in entry.contents %}
+        {% if content.name == "name" %}
+          <div class="{{ content.class }}">{{ content.value }}</div>
+        {% elsif content.name == "label" %}
+          <div class="label">{{ content.value }}</div>
+        {% elsif content.name == "summary" %}
+          <div class="summary">{{ content.value }}</div>
+        {% endif %}
+      {% endfor %}
+      <div class="contact-info">
+        {% for content in entry.contents %}
+          {% if content.name != "image" and content.name != "name" and content.name != "label" and content.name != "summary" %}
+            {% if content.value and content.value != "" %}
+              <div>
+                {% if content.name == "email" %}
+                  <i class="fas fa-envelope"></i>
+                {% elsif content.name == "website" %}
+                  <i class="fas fa-globe"></i>
+                {% elsif content.name == "github" %}
+                  <i class="fab fa-github"></i>
+                {% elsif content.name == "linkedin" %}
+                  <i class="fab fa-linkedin"></i>
+                {% elsif content.name == "location" %}
+                  <i class="fas fa-map-marker-alt"></i>
+                {% endif %}
+                {{ content.value }}
+              </div>
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+{% else %}
+  <table class="table table-cv table-sm table-borderless table-responsive">
+    {% for content in entry.contents %}
+      <tr>
+        <td class="p-1 pr-2 font-weight-bold">
+          <b>{{ content.name }}</b>
         </td>
-      {% endif %}
-    </tr>
-  {% endfor %}
-</table>
+        {% if content.value %}
+          <td class="p-1 pl-2 font-weight-light text">{{ content.value }}</td>
+        {% endif %}
+        {% if content.links %}
+          <td class="p-1 pl-2 font-weight-light text">
+            <div class="container-pdf">
+              {% for item in content.links %}
+                {% if item.link %}
+                  <div class="container-link-button">
+                    {% if item.name %}
+                      <a href="{{ item.link }}" target="_blank" class="btncv z-depth-0">{{ item.name }}</a>
+                    {% else %}
+                      <a href="{{ item.link }}" target="_blank" class="btncv z-depth-0">doc</a>
+                    {% endif %}
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+          </td>
+        {% endif %}
+      </tr>
+    {% endfor %}
+  </table>
+{% endif %}

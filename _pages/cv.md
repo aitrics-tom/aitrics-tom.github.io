@@ -1,9 +1,11 @@
 ---
-layout: page
+layout: cv
 permalink: /cv/
 title: cv
 nav: true
 nav_order: 4
+cv_pdf: Sunguk_Jang_CV.pdf
+description: AI Researcher specializing in Debiasing, Robustness, and Healthcare AI
 ---
 
 <div style="text-align: right; margin-bottom: 2rem;">

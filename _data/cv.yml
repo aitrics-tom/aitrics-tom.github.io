@@ -1,135 +1,125 @@
 # CV 데이터 파일
-basics:
-  name: "Sunguk Jang (장성욱)"
-  label: "AI Researcher"
-  image: "prof_pic.jpeg"
-  email: "your-email@example.com"  # 실제 이메일로 변경
-  url: "https://aitrics-tom.github.io"
-  summary: "AI Researcher specializing in Debiasing, Robustness, and Healthcare AI. Focused on Long-tailed Learning, Spurious Correlations on EHR, and Domain Adaptation for medical applications."
-  location:
-    address: "Seoul, South Korea"
-    postalCode: ""
-    city: "Seoul"
-    countryCode: "KR"
-    region: ""
-  profiles:
-    - network: "LinkedIn"
-      username: "your-linkedin"  # 실제 LinkedIn으로 변경
-      url: "https://linkedin.com/in/your-profile"
-    - network: "GitHub"
-      username: "aitrics-tom"
-      url: "https://github.com/aitrics-tom"
+- title: About
+  type: map
+  contents:
+    name:
+      value: Sunguk Jang (장성욱)
+      class: name
+    label:
+      value: Medical AI Researcher at AITRICS
+    image:
+      value: prof_pic.jpeg
+      class: "img-fluid z-depth-1 rounded-circle"
+    summary:
+      value: AI Researcher specializing in Debiasing, Robustness, and Healthcare AI. Focused on Long-tailed Learning, Spurious Correlations on EHR, and Domain Adaptation for medical applications. Currently working as a Specialized Research Personnel (Military Service Alternative) at AITRICS.
+    email:
+      value: <a href="mailto:your-email@example.com">your-email@example.com</a>
+    website:
+      value: <a href="https://aitrics-tom.github.io">aitrics-tom.github.io</a>
+    github:
+      value: <a href="https://github.com/aitrics-tom">aitrics-tom</a>
+    linkedin:
+      value: <a href="https://linkedin.com/in/your-profile">linkedin.com/in/your-profile</a>
+    location:
+      value: Seoul, Republic of Korea
 
-education:
-  - institution: "Korea Advanced Institute of Science and Technology (KAIST)"
-    area: "AI (Kim Jaechul Graduate School of AI)"
-    studyType: "Master of Science"
-    startDate: "2021-03"
-    endDate: "2023-02"
-    score: ""
-    courses: []
-    description: "Thesis: Decoupled Training for Long-Tailed Classification With Stochastic Representations"
-    advisor: "Prof. Juho Lee (SIML Lab)"
-  - institution: "Korea University"
-    area: "Computer Science and Engineering (Double Major: Statistics)"
-    studyType: "Bachelor of Science"
-    startDate: "2017-03"
-    endDate: "2021-02"
-    score: ""
-    courses: []
-    description: "National Scholarship for Science and Engineering (2 years full scholarship)"
+- title: Research Interests
+  type: nested_list
+  contents:
+    - title: Primary Areas
+      items:
+        - Debiasing
+        - Robustness
+        - Healthcare AI
+    - title: Specific Focus
+      items:
+        - Long-tailed Learning
+        - Spurious Correlations on EHR
+        - Domain Adaptation on EHR
 
-work:
-  - name: "AITRICS"
-    position: "Medical AI Researcher"
-    url: "https://aitrics.com"
-    startDate: "2023-02"
-    endDate: "Present"
-    summary: "Specialized Research Personnel (Military Service Alternative)"
-    highlights:
-      - "Developed Target Domain-optimized Source Data Selection Algorithm for Disease Early Prediction Models"
-      - "Improved Bidirectional LSTM model performance across multiple hospitals (target domains) with enhanced AUROC, AUPRC, F1-score, and PPV metrics"
-      - "Led Domain Adaptation research for EHR data, focusing on spurious correlation mitigation"
-      - "Contributed to the company's flagship product using Vital Signs and Lab test data"
+- title: Education
+  type: time_table
+  contents:
+    - title: M.S. in AI
+      institution: Korea Advanced Institute of Science and Technology (KAIST)
+      year: 2021 - 2023
+      description:
+        - Kim Jaechul Graduate School of AI
+        - Advisor - Prof. Juho Lee (SIML Lab)
+        - Thesis - "Decoupled Training for Long-Tailed Classification With Stochastic Representations"
+    - title: B.S. in Computer Science and Engineering
+      institution: Korea University
+      year: 2017 - 2021
+      description:
+        - Double Major in Statistics
+        - National Scholarship for Science and Engineering (2 years)
 
-volunteer:
-  - organization: "CVPR 2025"
-    position: "Reviewer"
-    url: ""
-    startDate: "2024-01"
-    endDate: "Present"
-    summary: "Peer review for Computer Vision and Pattern Recognition conference"
+- title: Professional Experience
+  type: time_table
+  contents:
+    - title: Medical AI Researcher
+      institution: AITRICS
+      year: 2023 - Present
+      description:
+        - Specialized Research Personnel (Military Service Alternative - Mar 2023 - Mar 2026)
+        - Developed Target Domain-optimized Source Data Selection Algorithm for Disease Early Prediction Models
+        - Improved Bidirectional LSTM model performance across multiple hospitals with enhanced AUROC, AUPRC, F1-score, and PPV metrics
+        - Led Domain Adaptation research for EHR data, focusing on spurious correlation mitigation
+        - Contributed to flagship product using Vital Signs and Lab test data for disease prediction
+    - title: Undergraduate Research Assistant
+      institution: MLV Lab, Korea University
+      year: 2020
+      description:
+        - Advised by Prof. Hyunwoo Kim
+        - Conducted research on machine learning and computer vision
 
-awards:
-  - title: "National Scholarship for Science and Engineering"
-    date: "2019-2021"
-    awarder: "Ministry of Science and ICT"
-    summary: "Full scholarship for 2 years during undergraduate studies"
-  - title: "SW Maestro 11th Generation"
-    date: "2020"
-    awarder: "Ministry of Science and ICT"
-    summary: "Selected as SW Maestro training program participant"
+- title: Publications
+  type: list
+  contents:
+    - <strong>Decoupled Training for Long-Tailed Classification With Stochastic Representations</strong><br>
+      <em>Sunguk Jang*</em>, [Co-authors]<br>
+      <span style="color:#666;">International Conference on Learning Representations (ICLR), 2023</span><br>
+      <small style="color:#888;">Co-first author, led research design and implementation</small>
+    - <strong>SC-LnD - Super-Class Learning & Pseudo-Label Debiasing Framework for Improved Long-Tailed Semi-Supervised Learning</strong><br>
+      <em>Sunguk Jang*</em>, [Co-authors]<br>
+      <span style="color:#666;">Under Review, 2024</span><br>
+      <small style="color:#888;">Co-first author, research design and leadership</small>
+    - <small style="color:#888;">(* denotes equal contribution)</small>
 
-publications:
-  - name: "Decoupled Training for Long-Tailed Classification With Stochastic Representations"
-    publisher: "ICLR 2023"
-    releaseDate: "2023"
-    url: ""
-    summary: "Co-first author, led research design and implementation"
-  - name: "SC-LnD: Super-Class Learning & Pseudo-Label Debiasing Framework for Improved Long-Tailed Semi-Supervised Learning"
-    publisher: "Under Review"
-    releaseDate: "2025"
-    url: ""
-    summary: "Co-first author, research design and leadership"
+- title: Honors and Awards
+  type: time_table
+  contents:
+    - year: 2019-2021
+      items:
+        - <b>National Scholarship for Science and Engineering</b>
+        - Korea Student Aid Foundation
+        - Full scholarship for 2 years during undergraduate studies
+    - year: 2020
+      items:
+        - <b>SW Maestro 11th Generation</b>
+        - Ministry of Science and ICT
+        - Selected as SW Maestro training program participant
 
-skills:
-  - name: "Programming Languages"
-    level: ""
-    keywords:
-      - "Python (Intermediate)"
-  - name: "Machine Learning & Deep Learning"
-    level: ""
-    keywords:
-      - "PyTorch"
-      - "Long-tailed Learning"
-      - "Domain Adaptation"
-      - "Debiasing"
-      - "Healthcare AI"
-  - name: "Tools & Platforms"
-    level: ""
-    keywords:
-      - "Git"
-      - "Docker"
-      - "MLFlow"
-      - "Gemini-CLI"
-      - "Cursor"
-  - name: "Research Areas"
-    level: ""
-    keywords:
-      - "Spurious Correlations on EHR"
-      - "Robustness"
-      - "Medical AI"
+- title: Academic Service
+  type: list
+  contents:
+    - <b>Reviewer</b> - CVPR (IEEE/CVF Conference on Computer Vision and Pattern Recognition), 2025
 
-languages:
-  - language: "Korean"
-    fluency: "Native"
-  - language: "English"
-    fluency: "Professional Working Proficiency"
-
-interests:
-  - name: "Primary Research Interests"
-    keywords:
-      - "Debiasing"
-      - "Robustness"
-      - "Healthcare AI"
-  - name: "Specific Focus Areas"
-    keywords:
-      - "Long-tailed Learning"
-      - "Spurious Correlations on EHR"
-      - "Domain Adaptation on EHR"
-
-references:
-  - name: "Prof. Juho Lee"
-    reference: "Advisor, KAIST SIML Lab"
-  - name: "Prof. Hyunwoo Kim"
-    reference: "Undergraduate Research Advisor, Korea University MLV Lab"
+- title: Technical Skills
+  type: nested_list
+  contents:
+    - title: Programming
+      items:
+        - Python (Intermediate)
+        - PyTorch
+        - Git
+    - title: Tools & Platforms
+      items:
+        - Docker
+        - MLFlow
+        - Gemini-CLI
+        - Cursor
+    - title: Languages
+      items:
+        - Korean (Native)
+        - English (Professional Working Proficiency)
