@@ -19,35 +19,24 @@
             color: #2c3e50;
             background: white;
             font-size: 11pt;
-        }
-        
-        .cv-container {
             max-width: 210mm;
             margin: 0 auto;
             padding: 20mm;
-            background: white;
         }
         
         /* Header */
         .header {
             text-align: center;
             margin-bottom: 30px;
-            border-bottom: 3px solid #f39c12;
-            padding-bottom: 20px;
+            border-bottom: 2px solid #34495e;
+            padding-bottom: 15px;
         }
         
         .name {
-            font-size: 28pt;
+            font-size: 24pt;
             font-weight: 700;
             color: #2c3e50;
             margin-bottom: 5px;
-        }
-        
-        .title {
-            font-size: 14pt;
-            font-weight: 500;
-            color: #f39c12;
-            margin-bottom: 10px;
         }
         
         .contact-info {
@@ -61,80 +50,43 @@
             text-decoration: none;
         }
         
-        /* Sections */
-        .section {
-            margin-bottom: 25px;
-        }
-        
-        .section-title {
-            font-size: 14pt;
-            font-weight: 600;
-            color: #2c3e50;
-            border-bottom: 2px solid #ecf0f1;
-            padding-bottom: 5px;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        
-        /* Education */
-        .education-item {
-            margin-bottom: 15px;
-        }
-        
-        .degree {
-            font-weight: 600;
-            color: #2c3e50;
-            font-size: 12pt;
-        }
-        
-        .institution {
-            font-weight: 500;
-            color: #34495e;
-        }
-        
-        .date {
-            float: right;
-            color: #7f8c8d;
-            font-weight: 400;
-        }
-        
-        .details {
-            font-size: 10pt;
-            color: #7f8c8d;
-            margin-top: 3px;
-            font-style: italic;
-        }
-        
-        /* Experience */
-        .experience-item {
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
             margin-bottom: 20px;
         }
         
-        .job-title {
+        th {
+            text-align: left;
             font-weight: 600;
             color: #2c3e50;
-            font-size: 12pt;
+            padding: 8px 0;
+            border-bottom: 1px solid #ecf0f1;
+            vertical-align: top;
+            width: 25%;
         }
         
-        .company {
-            font-weight: 500;
-            color: #34495e;
+        td {
+            padding: 8px 0;
+            border-bottom: 1px solid #ecf0f1;
+            vertical-align: top;
         }
         
-        .highlights {
-            margin-top: 8px;
-            padding-left: 20px;
-        }
-        
-        .highlights li {
-            margin-bottom: 3px;
-            font-size: 10pt;
+        /* Section Headers */
+        .section-header {
+            font-size: 14pt;
+            font-weight: 600;
+            color: #2c3e50;
+            margin: 25px 0 15px 0;
+            border-bottom: 2px solid #34495e;
+            padding-bottom: 5px;
         }
         
         /* Publications */
-        .publication-item {
+        .publication {
             margin-bottom: 12px;
+            padding-left: 15px;
         }
         
         .pub-title {
@@ -142,9 +94,14 @@
             color: #2c3e50;
         }
         
-        .pub-venue {
+        .pub-authors {
             color: #7f8c8d;
             font-style: italic;
+        }
+        
+        .pub-venue {
+            color: #e74c3c;
+            font-weight: 500;
         }
         
         .pub-year {
@@ -152,32 +109,50 @@
             font-weight: 500;
         }
         
+        /* Experience */
+        .experience-item {
+            margin-bottom: 15px;
+        }
+        
+        .job-title {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        .company {
+            color: #34495e;
+        }
+        
+        .date {
+            color: #7f8c8d;
+            font-style: italic;
+        }
+        
+        .description {
+            margin-top: 5px;
+            font-size: 10pt;
+            color: #7f8c8d;
+        }
+        
         /* Skills */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
+        .skills-section {
+            margin-bottom: 15px;
         }
         
         .skill-category {
-            margin-bottom: 10px;
-        }
-        
-        .skill-category h4 {
-            font-size: 11pt;
             font-weight: 600;
             color: #2c3e50;
             margin-bottom: 5px;
         }
         
         .skill-list {
-            font-size: 10pt;
             color: #7f8c8d;
+            font-size: 10pt;
         }
         
         /* Awards */
         .award-item {
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
         
         .award-title {
@@ -190,171 +165,170 @@
             font-style: italic;
         }
         
-        /* Clear floats */
-        .clearfix::after {
-            content: "";
-            clear: both;
-            display: table;
+        /* Academic Service */
+        .service-item {
+            margin-bottom: 8px;
         }
         
-        /* Page break */
-        .page-break {
-            page-break-before: always;
+        .service-title {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        .service-org {
+            color: #7f8c8d;
         }
         
         @media print {
             body {
                 font-size: 10pt;
-            }
-            
-            .cv-container {
                 padding: 15mm;
             }
         }
     </style>
 </head>
 <body>
-    <div class="cv-container">
-        <!-- Header -->
-        <div class="header">
-            <div class="name">Sunguk Jang (장성욱)</div>
-            <div class="title">AI Researcher</div>
-            <div class="contact-info">
-                Medical AI Researcher at AITRICS<br>
-                Email: your-email@example.com | LinkedIn: linkedin.com/in/your-profile<br>
-                GitHub: github.com/aitrics-tom | Website: aitrics-tom.github.io<br>
-                Seoul, South Korea
-            </div>
+    <!-- Header -->
+    <div class="header">
+        <div class="name">Sunguk Jang (장성욱)</div>
+        <div class="contact-info">
+            Medical AI Researcher at AITRICS<br>
+            Email: your-email@example.com | Website: https://aitrics-tom.github.io/<br>
+            GitHub: https://github.com/aitrics-tom | LinkedIn: linkedin.com/in/your-profile<br>
+            Seoul, Republic of Korea
         </div>
+    </div>
 
-        <!-- Education -->
-        <div class="section">
-            <div class="section-title">Education</div>
-            
-            <div class="education-item clearfix">
-                <div class="degree">Master of Science in AI</div>
-                <div class="date">2021.03 - 2023.02</div>
-                <div class="institution">Korea Advanced Institute of Science and Technology (KAIST)</div>
-                <div class="details">Kim Jaechul Graduate School of AI | Advisor: Prof. Juho Lee (SIML Lab)</div>
-                <div class="details">Thesis: "Decoupled Training for Long-Tailed Classification With Stochastic Representations"</div>
-            </div>
-            
-            <div class="education-item clearfix">
-                <div class="degree">Bachelor of Science in Computer Science and Engineering</div>
-                <div class="date">2017.03 - 2021.02</div>
-                <div class="institution">Korea University</div>
-                <div class="details">Double Major: Statistics | National Scholarship for Science and Engineering (2 years)</div>
-            </div>
-        </div>
+    <!-- Education -->
+    <div class="section-header">Education</div>
+    <table>
+        <tr>
+            <th>KAIST</th>
+            <td>
+                M.S. in AI (Kim Jaechul Graduate School of AI)<br>
+                Advised by Professor Juho Lee at SIML Lab, KAIST<br>
+                Thesis: "Decoupled Training for Long-Tailed Classification With Stochastic Representations"
+            </td>
+            <td style="text-align: right;">Mar 2021 - Feb 2023</td>
+        </tr>
+        <tr>
+            <th>Korea University</th>
+            <td>
+                B.S. in Computer Science and Engineering<br>
+                B.S. in Statistics (Double Major)<br>
+                National Scholarship for Science and Engineering (2 years)
+            </td>
+            <td style="text-align: right;">Mar 2017 - Feb 2021</td>
+        </tr>
+    </table>
 
-        <!-- Experience -->
-        <div class="section">
-            <div class="section-title">Professional Experience</div>
-            
-            <div class="experience-item clearfix">
-                <div class="job-title">Medical AI Researcher</div>
-                <div class="date">2023.02 - Present</div>
-                <div class="company">AITRICS</div>
-                <div class="details">Specialized Research Personnel (Military Service Alternative: 2023.03-2026.03)</div>
-                <ul class="highlights">
-                    <li>Developed Target Domain-optimized Source Data Selection Algorithm for Disease Early Prediction Models</li>
-                    <li>Improved Bidirectional LSTM model performance across multiple hospitals with enhanced AUROC, AUPRC, F1-score, and PPV metrics</li>
-                    <li>Led Domain Adaptation research for EHR data, focusing on spurious correlation mitigation</li>
-                    <li>Contributed to flagship product using Vital Signs and Lab test data for disease prediction</li>
-                </ul>
-            </div>
-            
-            <div class="experience-item clearfix">
-                <div class="job-title">Undergraduate Research Assistant</div>
-                <div class="date">2020.03 - 2020.12</div>
-                <div class="company">Korea University MLV Lab</div>
-                <div class="details">Advisor: Prof. Hyunwoo Kim</div>
-            </div>
-        </div>
+    <!-- Research Interests -->
+    <div class="section-header">Research Interests</div>
+    <table>
+        <tr>
+            <th>Research</th>
+            <td>
+                My research focuses on developing robust and debiased AI systems for healthcare applications. 
+                I work on Long-tailed Learning, Spurious Correlations on EHR, and Domain Adaptation to create 
+                reliable medical AI models that can generalize across different healthcare institutions.
+            </td>
+        </tr>
+    </table>
 
-        <!-- Research Interests -->
-        <div class="section">
-            <div class="section-title">Research Interests</div>
-            <div style="font-size: 11pt; line-height: 1.8;">
-                <strong>Primary:</strong> Debiasing, Robustness, Healthcare AI<br>
-                <strong>Specific Focus:</strong> Long-tailed Learning, Spurious Correlations on EHR, Domain Adaptation on EHR
-            </div>
-        </div>
+    <!-- Publications -->
+    <div class="section-header">Publications</div>
+    <div class="publication">
+        <div class="pub-title">Decoupled Training for Long-Tailed Classification With Stochastic Representations</div>
+        <div class="pub-authors">Sunguk Jang*, [Co-authors]</div>
+        <div class="pub-venue">International Conference on Learning Representations (ICLR)</div>
+        <div class="pub-year">2023</div>
+        <div class="description">Co-first author, led research design and implementation</div>
+    </div>
+    
+    <div class="publication">
+        <div class="pub-title">SC-LnD: Super-Class Learning & Pseudo-Label Debiasing Framework for Improved Long-Tailed Semi-Supervised Learning</div>
+        <div class="pub-authors">Sunguk Jang*, [Co-authors]</div>
+        <div class="pub-venue">Under Review</div>
+        <div class="pub-year">2024</div>
+        <div class="description">Co-first author, research design and leadership</div>
+    </div>
+    <div style="font-size: 9pt; color: #7f8c8d; margin-top: 10px;">(* denotes equal contribution)</div>
 
-        <!-- Publications -->
-        <div class="section">
-            <div class="section-title">Publications</div>
-            
-            <div class="publication-item">
-                <div class="pub-title">Decoupled Training for Long-Tailed Classification With Stochastic Representations</div>
-                <div class="pub-venue">International Conference on Learning Representations (ICLR)</div>
-                <div class="pub-year">2023</div>
-                <div style="font-size: 10pt; color: #7f8c8d; margin-top: 3px;">Co-first author, led research design and implementation</div>
-            </div>
-            
-            <div class="publication-item">
-                <div class="pub-title">SC-LnD: Super-Class Learning & Pseudo-Label Debiasing Framework for Improved Long-Tailed Semi-Supervised Learning</div>
-                <div class="pub-venue">Under Review</div>
-                <div class="pub-year">2024</div>
-                <div style="font-size: 10pt; color: #7f8c8d; margin-top: 3px;">Co-first author, research design and leadership</div>
-            </div>
+    <!-- Work Experience -->
+    <div class="section-header">Work Experience</div>
+    
+    <div class="experience-item">
+        <div class="job-title">Medical AI Researcher</div>
+        <div class="company">AITRICS</div>
+        <div class="date">Feb 2023 - Present</div>
+        <div class="description">
+            - Specialized Research Personnel (Military Service Alternative: Mar 2023 - Mar 2026)<br>
+            - Developed Target Domain-optimized Source Data Selection Algorithm for Disease Early Prediction Models<br>
+            - Improved Bidirectional LSTM model performance across multiple hospitals with enhanced AUROC, AUPRC, F1-score, and PPV metrics<br>
+            - Led Domain Adaptation research for EHR data, focusing on spurious correlation mitigation<br>
+            - Contributed to flagship product using Vital Signs and Lab test data for disease prediction
         </div>
+    </div>
+    
+    <div class="experience-item">
+        <div class="job-title">Undergraduate Research Assistant</div>
+        <div class="company">MLV Lab, Korea University</div>
+        <div class="date">Mar 2020 - Dec 2020</div>
+        <div class="description">
+            - Advised by Professor Hyunwoo Kim at MLV Lab, Korea University
+        </div>
+    </div>
 
-        <!-- Technical Skills -->
-        <div class="section">
-            <div class="section-title">Technical Skills</div>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h4>Programming Languages</h4>
-                    <div class="skill-list">Python (Intermediate)</div>
-                </div>
-                <div class="skill-category">
-                    <h4>Machine Learning & Deep Learning</h4>
-                    <div class="skill-list">PyTorch, Long-tailed Learning, Domain Adaptation, Debiasing, Healthcare AI</div>
-                </div>
-                <div class="skill-category">
-                    <h4>Tools & Platforms</h4>
-                    <div class="skill-list">Git, Docker, MLFlow, Gemini-CLI, Cursor</div>
-                </div>
-                <div class="skill-category">
-                    <h4>Research Areas</h4>
-                    <div class="skill-list">Spurious Correlations on EHR, Robustness, Medical AI</div>
-                </div>
-            </div>
-        </div>
+    <!-- Honors & Awards -->
+    <div class="section-header">Honors & Awards</div>
+    <div class="award-item">
+        <div class="award-title">National Scholarship for Science and Engineering</div>
+        <div class="award-org">Korea Student Aid Foundation</div>
+        <div style="color: #7f8c8d; font-size: 10pt;">Full scholarship for 2 years during undergraduate studies</div>
+    </div>
+    
+    <div class="award-item">
+        <div class="award-title">SW Maestro 11th Generation</div>
+        <div class="award-org">Ministry of Science and ICT</div>
+        <div style="color: #7f8c8d; font-size: 10pt;">Selected as SW Maestro training program participant</div>
+    </div>
 
-        <!-- Awards & Honors -->
-        <div class="section">
-            <div class="section-title">Awards & Honors</div>
-            
-            <div class="award-item">
-                <div class="award-title">National Scholarship for Science and Engineering</div>
-                <div class="award-org">Ministry of Science and ICT</div>
-                <div style="font-size: 10pt; color: #7f8c8d;">Full scholarship for 2 years during undergraduate studies</div>
-            </div>
-            
-            <div class="award-item">
-                <div class="award-title">SW Maestro 11th Generation</div>
-                <div class="award-org">Ministry of Science and ICT</div>
-                <div style="font-size: 10pt; color: #7f8c8d;">Selected as SW Maestro training program participant</div>
-            </div>
-        </div>
+    <!-- Academic Services -->
+    <div class="section-header">Academic Services</div>
+    <div class="service-item">
+        <div class="service-title">Reviewer of CVPR</div>
+        <div class="service-org">IEEE/CVF Conference on Computer Vision and Pattern Recognition</div>
+        <div style="color: #7f8c8d; font-size: 10pt;">2025</div>
+    </div>
 
-        <!-- Academic Service -->
-        <div class="section">
-            <div class="section-title">Academic Service</div>
-            <div style="font-size: 11pt; line-height: 1.8;">
-                <strong>CVPR 2025</strong> - Reviewer (2024 - Present)
-            </div>
-        </div>
+    <!-- Skills -->
+    <div class="section-header">Skills</div>
+    <table>
+        <tr>
+            <th>Language</th>
+            <td>
+                - Korean (native)<br>
+                - English (professional working proficiency)
+            </td>
+        </tr>
+        <tr>
+            <th>Programming Skills</th>
+            <td>
+                - Python, PyTorch, Git (Most proficient)<br>
+                - Docker, MLFlow, Gemini-CLI, Cursor (Experienced)
+            </td>
+        </tr>
+        <tr>
+            <th>Research Areas</th>
+            <td>
+                - Debiasing, Robustness, Healthcare AI<br>
+                - Long-tailed Learning, Spurious Correlations on EHR, Domain Adaptation on EHR
+            </td>
+        </tr>
+    </table>
 
-        <!-- Languages -->
-        <div class="section">
-            <div class="section-title">Languages</div>
-            <div style="font-size: 11pt; line-height: 1.8;">
-                <strong>Korean:</strong> Native | <strong>English:</strong> Professional Working Proficiency
-            </div>
-        </div>
+    <div style="text-align: center; margin-top: 30px; font-size: 9pt; color: #7f8c8d;">
+        <em>Last Updated: Jan 15, 2025</em>
     </div>
 </body>
 </html> 
