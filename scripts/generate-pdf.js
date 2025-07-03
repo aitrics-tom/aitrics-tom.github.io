@@ -1,0 +1,1 @@
+const puppeteer=require("puppeteer"),path=require("path");(async()=>{const t=await puppeteer.launch(),a=await t.newPage();await a.goto(`file://${path.join(__dirname,"../assets/html/cv_template.html")}`,{waitUntil:"networkidle0"}),await a.pdf({path:"assets/pdf/Sunguk_Jang_CV.pdf",format:"A4",margin:{top:"0.5in",bottom:"0.5in",left:"0.5in",right:"0.5in"}}),await t.close()})();
