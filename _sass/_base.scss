@@ -241,33 +241,82 @@ ul.task-list input[type="checkbox"] {
   }
 }
 
-// Navbar customization
-
-.navbar {
-  min-height: 56px;
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-  box-shadow: none;
-  border-bottom: none;
-  background-color: #ffd600;
-  opacity: 0.95;
+.profile img {
+  max-width: 200px;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
 }
 
-.navbar .dropdown-menu {
-  background-color: var(--global-bg-color);
-  border: 1px solid var(--global-divider-color);
-
-  a:not(.active) {
-    color: var(--global-text-color);
+// Navbar
+.navbar {
+  background-color: #ffd600 !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 0.75rem 0;
+  
+  .navbar-nav {
+    .nav-link {
+      color: #fff !important;
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      margin: 0 0.25rem;
+      transition: all 0.2s ease;
+      
+      &:hover {
+        color: #fff !important;
+        opacity: 0.8;
+      }
+    }
+    
+    .nav-item.active .nav-link {
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 0.25rem;
+    }
   }
-
-  a:hover {
-    color: var(--global-hover-color);
+  
+  #search-toggle {
+    background: transparent;
+    border: none;
+    
+    .nav-link {
+      color: #fff !important;
+      
+      &:hover {
+        opacity: 0.8;
+      }
+    }
   }
-
-  .dropdown-divider {
-    border-top: 1px solid var(--global-divider-color) !important;
+  
+  .navbar-toggler {
+    border: none;
+    padding: 0.25rem 0.5rem;
+    
+    &:focus {
+      box-shadow: none;
+    }
+    
+    .icon-bar {
+      background-color: #fff;
+      height: 2px;
+      width: 22px;
+      display: block;
+      margin: 4px 0;
+      transition: all 0.3s;
+    }
   }
+}
+
+// Remove navbar brand on all pages
+.navbar-brand {
+  display: none !important;
 }
 
 .dropdown-item {
@@ -1454,15 +1503,6 @@ figure.cover {
   display: block;
   margin: 0 auto 0.5em auto;
   text-shadow: none !important;
-}
-
-.profile img {
-  max-width: 220px;
-  height: auto;
-  aspect-ratio: 1/1.25;
-  object-fit: cover;
-  border-radius: 50% / 40%; /* 타원형(ellipse) */
-  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
 }
 
 // Yellow Gradients 테마 색상

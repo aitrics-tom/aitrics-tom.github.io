@@ -16,6 +16,8 @@ $max-content-width: {{ site.max_width }};
   "tabs",
   "typograms",
   "about",
+  "blog",
+  "post",
   "font-awesome/fontawesome",
   "font-awesome/brands",
   "font-awesome/solid",
@@ -36,91 +38,6 @@ $max-content-width: {{ site.max_width }};
 .nav-logo-script,
 .yellow-gradients-handwriting {
   font-family: 'Bebas Neue', 'Arial Black', sans-serif !important;
-}
-
-/* 네비게이션 바 Yellow Gradients 브랜드 흰색 단색 - 최강 적용 모든 페이지 */
-body header .navbar .navbar-brand,
-body header .navbar .navbar-brand.title,  
-body header .navbar .navbar-brand.nav-logo-script,
-body header .navbar .navbar-brand.yellow-gradients-brand,
-body header .navbar a.navbar-brand,
-body header .navbar a.navbar-brand.title,
-body header .navbar a.navbar-brand.nav-logo-script,
-body header .navbar a.navbar-brand.yellow-gradients-brand,
-body .navbar .navbar-brand,
-body .navbar .navbar-brand.title,
-body .navbar .navbar-brand.nav-logo-script,
-body .navbar .navbar-brand.yellow-gradients-brand,
-body .navbar a.navbar-brand,
-body .navbar a.navbar-brand.title,
-body .navbar a.navbar-brand.nav-logo-script,
-body .navbar a.navbar-brand.yellow-gradients-brand,
-html body header .navbar-brand,
-html body header .navbar-brand.title,
-html body header .navbar-brand.nav-logo-script,
-html body header .navbar-brand.yellow-gradients-brand,
-html body header a.navbar-brand,
-html body header a.navbar-brand.title,
-html body header a.navbar-brand.nav-logo-script,
-html body header a.navbar-brand.yellow-gradients-brand {
-  font-family: 'Bebas Neue', 'Arial Black', sans-serif !important;
-  color: white !important;
-  font-size: 1.5rem !important;
-  letter-spacing: 0.05em !important;
-  text-decoration: none !important;
-  background: none !important;
-  background-color: transparent !important;
-  background-image: none !important;
-  background-clip: border-box !important;
-  -webkit-background-clip: border-box !important;
-  -webkit-text-fill-color: white !important;
-  -moz-text-fill-color: white !important;
-  text-fill-color: white !important;
-  font-weight: 400 !important;
-}
-
-/* 호버 상태에서도 흰색 유지 - 강제 적용 */
-body header .navbar .navbar-brand:hover,
-body header .navbar .navbar-brand.title:hover,
-body header .navbar .navbar-brand.nav-logo-script:hover,
-body header .navbar .navbar-brand.yellow-gradients-brand:hover,
-body header .navbar a.navbar-brand:hover,
-body header .navbar a.navbar-brand.title:hover,
-body header .navbar a.navbar-brand.nav-logo-script:hover,
-body header .navbar a.navbar-brand.yellow-gradients-brand:hover,
-body .navbar .navbar-brand:hover,
-body .navbar .navbar-brand.title:hover,
-body .navbar .navbar-brand.nav-logo-script:hover,
-body .navbar .navbar-brand.yellow-gradients-brand:hover,
-body .navbar a.navbar-brand:hover,
-body .navbar a.navbar-brand.title:hover,
-body .navbar a.navbar-brand.nav-logo-script:hover,
-body .navbar a.navbar-brand.yellow-gradients-brand:hover,
-html body header .navbar-brand:hover,
-html body header .navbar-brand.title:hover,
-html body header .navbar-brand.nav-logo-script:hover,
-html body header .navbar-brand.yellow-gradients-brand:hover,
-html body header a.navbar-brand:hover,
-html body header a.navbar-brand.title:hover,
-html body header a.navbar-brand.nav-logo-script:hover,
-html body header a.navbar-brand.yellow-gradients-brand:hover {
-  color: white !important;
-  text-decoration: none !important;
-  -webkit-text-fill-color: white !important;
-  -moz-text-fill-color: white !important;
-  text-fill-color: white !important;
-  background: none !important;
-  background-image: none !important;
-}
-
-/* 네비게이션 링크 기본 스타일 (bold 제거) */
-.navbar-nav .nav-link {
-  font-weight: normal !important;
-}
-
-/* 현재 페이지만 bold */
-.navbar-nav .nav-item.active .nav-link {
-  font-weight: bold !important;
 }
 
 /* 모바일 다크 모드에서도 밝은 배경 유지 */

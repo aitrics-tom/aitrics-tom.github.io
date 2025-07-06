@@ -44,12 +44,7 @@
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    background: linear-gradient(135deg, var(--global-theme-color) 0%, #ffd700 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
-    animation: shimmer 3s ease-in-out infinite;
+    color: var(--global-text-color);
     
     @media (max-width: 768px) {
       font-size: 2.2rem;
@@ -80,12 +75,17 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
   margin-bottom: 2rem;
+  width: 100%;
   
   @media (max-width: 768px) {
     float: none !important;
-    margin: 0 auto 2rem;
+    margin: 0 auto 2rem !important;
     max-width: 300px;
     padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
   
   &:hover {
@@ -107,10 +107,12 @@
     background: rgba(255, 255, 255, 0.7);
     border-radius: 10px;
     padding: 1rem;
-    margin-top: 1rem;
+    margin-top: 5px;
+    margin-bottom: 5px;
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 224, 102, 0.2);
     font-size: 0.9rem;
+    font-family: monospace;
     
     @media (max-width: 768px) {
       font-size: 0.85rem;
@@ -120,6 +122,27 @@
     p {
       margin: 0.25rem 0;
       color: var(--global-text-color);
+      display: inline-block;
+    }
+  }
+}
+
+.profile.float-right {
+  margin-left: 1rem;
+}
+
+.profile.float-left {
+  margin-right: 1rem;
+}
+
+@media (min-width: 576px) {
+  .profile {
+    width: 30%;
+
+    .more-info {
+      p {
+        display: block;
+      }
     }
   }
 }
@@ -360,5 +383,94 @@ article {
   
   &:active {
     transform: translateY(0);
+  }
+}
+
+// Yellow Door Hero Section
+.yellow-door-hero {
+  display: none;
+}
+
+// About page specific styles
+.about {
+  position: relative;
+  
+  &::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60vh;
+    background-image: url('/assets/img/yellow_door.jpg');
+    background-size: cover;
+    background-position: center top;
+    background-attachment: fixed;
+    opacity: 0.15;
+    z-index: -1;
+  }
+  
+  .container {
+    background: linear-gradient(to bottom, 
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.8) 20%,
+      rgba(255, 255, 255, 0.95) 40%,
+      rgba(255, 255, 255, 1) 60%
+    );
+    position: relative;
+    z-index: 1;
+    padding-top: 2rem;
+  }
+  
+  h2 {
+    color: #333;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+  }
+  
+  h3 {
+    color: #555;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+  
+  .profile img {
+    border: 4px solid var(--yellow-primary);
+    box-shadow: 0 4px 20px rgba(255, 226, 89, 0.3);
+    
+    &:hover {
+      transform: scale(1.02);
+      transition: transform 0.3s ease;
+    }
+  }
+}
+
+.profile {
+  width: 100%;
+
+  .more-info {
+    margin-top: 1rem;
+    
+    p {
+      margin: 0.25rem 0;
+      color: #666;
+      font-size: 0.95rem;
+    }
+  }
+}
+
+.profile.float-right {
+  margin-left: 2rem;
+}
+
+.profile.float-left {
+  margin-right: 2rem;
+}
+
+@media (min-width: 576px) {
+  .profile {
+    width: 30%;
   }
 }

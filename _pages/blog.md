@@ -12,253 +12,79 @@ pagination:
   sort_field: date
   sort_reverse: true
   trail:
-    before: 1 # The number of links before the current page
-    after: 3 # The number of links after the current page
+    before: 1
+    after: 3
 ---
 
-<div class="post blog-theme-reset">
-
-<style>
-/* Yellow Gradients 제목 - 단순 노랑색 단색 */
-.yellow-gradients-handwriting {
-  font-family: 'Bebas Neue', 'Arial Black', sans-serif !important;
-  font-size: 6rem !important;
-  font-weight: 400 !important;
-  color: #FFD700 !important;
-  letter-spacing: 0.1em !important;
-  display: inline-block !important;
-  margin: 1rem 0 !important;
-  text-align: center !important;
-}
-
-/* 네비게이션 바 Yellow Gradients 브랜드 흰색 단색 - 강제 적용 */
-.navbar-brand.yellow-gradients-brand,
-.navbar-brand.nav-logo-script,
-a.navbar-brand.yellow-gradients-brand,
-a.navbar-brand.nav-logo-script,
-.navbar-brand.title {
-  font-family: 'Bebas Neue', 'Arial Black', sans-serif !important;
-  color: white !important;
-  font-size: 1.5rem !important;
-  letter-spacing: 0.05em !important;
-  text-decoration: none !important;
-  background: none !important;
-  background-color: transparent !important;
-  -webkit-text-fill-color: white !important;
-}
-
-.navbar-brand.yellow-gradients-brand:hover,
-.navbar-brand.nav-logo-script:hover,
-a.navbar-brand.yellow-gradients-brand:hover,
-a.navbar-brand.nav-logo-script:hover,
-.navbar-brand.title:hover {
-  color: white !important;
-  text-decoration: none !important;
-  -webkit-text-fill-color: white !important;
-}
-
-/* 네비게이션 링크 기본 스타일 */
-.navbar-nav .nav-link {
-  font-weight: normal !important;
-}
-
-/* 현재 페이지만 bold */
-.navbar-nav .nav-item.active .nav-link {
-  font-weight: bold !important;
-}
-
-/* 블로그 페이지 배경을 기본색으로 변경 */
-.blog-theme-reset {
-  background: white !important;
-  padding: 0 !important;
-  border-radius: 0 !important;
-}
-
-/* 헤더 바 기본 스타일로 변경 */
-.blog-theme-reset .header-bar {
-  background: white !important;
-  padding: 2rem 1rem !important;
-  border-radius: 0 !important;
-  margin-bottom: 2rem !important;
-  border: none !important;
-  box-shadow: none !important;
-}
-
-/* 설명 텍스트 검정색으로 */
-.blog-theme-reset .header-bar h2 {
-  color: #333 !important;
-  font-style: normal !important;
-  font-size: 1.2rem !important;
-  text-align: center !important;
-}
-
-/* 포스트 목록 기본 스타일로 */
-.blog-theme-reset .post-list li {
-  background: white !important;
-  border: 1px solid #ddd !important;
-  border-radius: 0.5rem !important;
-  padding: 2rem !important;
-  margin-bottom: 2rem !important;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
-  transition: all 0.3s ease !important;
-}
-
-.blog-theme-reset .post-list li:hover {
-  transform: translateY(-2px) !important;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15) !important;
-  border-color: #ccc !important;
-}
-
-.blog-theme-reset .post-list .post-title {
-  color: #333 !important;
-  font-weight: 700 !important;
-}
-
-.blog-theme-reset .post-list .post-title:hover {
-  color: #000 !important;
-}
-
-.blog-theme-reset .post-list .post-meta,
-.blog-theme-reset .post-list .post-tags {
-  color: #666 !important;
-}
-
-.blog-theme-reset .post-list .post-meta a,
-.blog-theme-reset .post-list .post-tags a {
-  color: #333 !important;
-}
-
-.blog-theme-reset .post-list .post-meta a:hover,
-.blog-theme-reset .post-list .post-tags a:hover {
-  color: #000 !important;
-}
-
-.blog-theme-reset .tag-category-list {
-  background: #f8f9fa !important;
-  padding: 1rem !important;
-  border-radius: 0.5rem !important;
-  border: 1px solid #dee2e6 !important;
-  margin-bottom: 2rem !important;
-}
-
-.blog-theme-reset .tag-category-list a {
-  color: #333 !important;
-  font-weight: 600 !important;
-}
-
-.blog-theme-reset .tag-category-list a:hover {
-  color: #000 !important;
-  text-decoration: underline !important;
-}
-
-.blog-theme-reset .featured-posts .card {
-  background: white !important;
-  border: 1px solid #ddd !important;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
-}
-
-.blog-theme-reset .featured-posts .card:hover {
-  border-color: #ccc !important;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15) !important;
-}
-
-.blog-theme-reset .featured-posts .card-title {
-  color: #333 !important;
-}
-
-@media (max-width: 768px) {
-  .yellow-gradients-handwriting {
-    font-size: 4rem !important;
-    letter-spacing: 0.08em !important;
-  }
-}
-</style>
-
-{% assign blog_name_size = site.blog_name | size %}
-{% assign blog_description_size = site.blog_description | size %}
-
-{% if blog_name_size > 0 or blog_description_size > 0 %}
-
-  <div class="header-bar">
-    <h1 class="yellow-gradients-handwriting">Yellow Gradients</h1>
-    <h2>{{ site.blog_description }}</h2>
+<div class="blog-container">
+  <!-- Hero Section -->
+  <div class="blog-hero">
+    <h1>Yellow Gradients</h1>
+    <p class="blog-subtitle">{{ site.blog_description }}</p>
   </div>
-  {% endif %}
 
-{% if site.display_tags and site.display_tags.size > 0 or site.display_categories and site.display_categories.size > 0 %}
-
-  <div class="tag-category-list">
-    <ul class="p-0 m-0">
-      {% for tag in site.display_tags %}
-        <li>
-          <i class="fa-solid fa-hashtag fa-sm"></i> <a href="{{ tag | slugify | prepend: '/blog/tag/' | relative_url }}">{{ tag }}</a>
-        </li>
-        {% unless forloop.last %}
-          <p>&bull;</p>
-        {% endunless %}
-      {% endfor %}
-      {% if site.display_categories.size > 0 and site.display_tags.size > 0 %}
-        <p>&bull;</p>
-      {% endif %}
-      {% for category in site.display_categories %}
-        <li>
-          <i class="fa-solid fa-tag fa-sm"></i> <a href="{{ category | slugify | prepend: '/blog/category/' | relative_url }}">{{ category }}</a>
-        </li>
-        {% unless forloop.last %}
-          <p>&bull;</p>
-        {% endunless %}
-      {% endfor %}
-    </ul>
+  <!-- Search Bar -->
+  <div class="blog-search">
+    <input type="text" placeholder="Search posts..." id="blog-search-input">
+    <button type="submit"><i class="fas fa-search"></i></button>
   </div>
-  {% endif %}
 
-{% assign featured_posts = site.posts | where: "featured", "true" %}
-{% if featured_posts.size > 0 %}
-<br>
-
-<div class="container featured-posts">
-{% assign is_even = featured_posts.size | modulo: 2 %}
-<div class="row row-cols-{% if featured_posts.size <= 2 or is_even == 0 %}2{% else %}3{% endif %}">
-{% for post in featured_posts %}
-<div class="col mb-4">
-<a href="{{ post.url | relative_url }}">
-<div class="card hoverable">
-<div class="row g-0">
-<div class="col-md-12">
-<div class="card-body">
-<div class="float-right">
-<i class="fa-solid fa-thumbtack fa-xs"></i>
-</div>
-<h3 class="card-title text-lowercase">{{ post.title }}</h3>
-<p class="card-text">{{ post.description }}</p>
-
-                    {% if post.external_source == blank %}
-                      {% assign read_time = post.content | number_of_words | divided_by: 180 | plus: 1 %}
-                    {% else %}
-                      {% assign read_time = post.feed_content | strip_html | number_of_words | divided_by: 180 | plus: 1 %}
-                    {% endif %}
-                    {% assign year = post.date | date: "%Y" %}
-
-                    <p class="post-meta">
-                      {{ read_time }} min read &nbsp; &middot; &nbsp;
-                      <a href="{{ year | prepend: '/blog/' | relative_url }}">
-                        <i class="fa-solid fa-calendar fa-sm"></i> {{ year }} </a>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
+  <!-- Featured Posts and Categories Section -->
+  {% assign featured_posts = site.posts | where: "featured", "true" %}
+  {% if featured_posts.size > 0 %}
+  <div class="featured-and-categories-section" style="display: grid; grid-template-columns: 2fr 1fr; gap: 2rem; margin-bottom: 3rem; align-items: start;">
+    <div class="featured-posts-grid">
+      {% for post in featured_posts limit:2 %}
+      <article class="featured-card">
+        <span class="featured-badge">Featured</span>
+        {% if post.thumbnail %}
+        <div class="featured-image">
+          <img src="{{ post.thumbnail | relative_url }}" alt="{{ post.title }}">
         </div>
+        {% endif %}
+        <div class="featured-content">
+          <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+          <div class="featured-meta">
+            <span class="reading-time">{{ post.content | number_of_words | divided_by: 180 | plus: 1 }} min</span>
+            <span class="post-date">{{ post.date | date: "%b %d, %Y" }}</span>
+          </div>
+          <p class="featured-description">{{ post.description }}</p>
+        </div>
+      </article>
       {% endfor %}
-      </div>
     </div>
-    <hr>
+    
+    <!-- Sidebar -->
+    <aside class="category-sidebar">
+      <h3>Categories & Tags</h3>
+      <div class="category-list">
+        {% if site.display_categories %}
+          {% for category in site.display_categories %}
+            {% assign cat_posts = site.posts | where_exp: "post", "post.categories contains category" %}
+            <a href="{{ category | slugify | prepend: '/blog/category/' | relative_url }}" class="category-item">
+              <span>{{ category }}</span>
+              <span class="category-count">{{ cat_posts.size }}</span>
+            </a>
+          {% endfor %}
+        {% endif %}
+        
+        {% if site.display_tags %}
+          {% for tag in site.display_tags %}
+            {% assign tag_posts = site.posts | where_exp: "post", "post.tags contains tag" %}
+            <a href="{{ tag | slugify | prepend: '/blog/tag/' | relative_url }}" class="category-item">
+              <span>#{{ tag }}</span>
+              <span class="category-count">{{ tag_posts.size }}</span>
+            </a>
+          {% endfor %}
+        {% endif %}
+      </div>
+    </aside>
+  </div>
+  <hr style="margin: 3rem 0; border: none; border-top: 1px solid rgba(255, 224, 102, 0.3);">
+  {% endif %}
 
-{% endif %}
-
-  <ul class="post-list">
-
+  <!-- Regular Posts List -->
+  <div class="modern-post-list">
     {% if page.pagination.enabled %}
       {% assign postlist = paginator.posts %}
     {% else %}
@@ -266,87 +92,126 @@ a.navbar-brand.nav-logo-script:hover,
     {% endif %}
 
     {% for post in postlist %}
-
-    {% if post.external_source == blank %}
-      {% assign read_time = post.content | number_of_words | divided_by: 180 | plus: 1 %}
-    {% else %}
-      {% assign read_time = post.feed_content | strip_html | number_of_words | divided_by: 180 | plus: 1 %}
-    {% endif %}
-    {% assign year = post.date | date: "%Y" %}
-    {% assign tags = post.tags | join: "" %}
-    {% assign categories = post.categories | join: "" %}
-
-    <li>
-
-{% if post.thumbnail %}
-
-<div class="row">
-          <div class="col-sm-9">
-{% endif %}
-        <h3>
-        {% if post.redirect == blank %}
-          <a class="post-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
-        {% elsif post.redirect contains '://' %}
-          <a class="post-title" href="{{ post.redirect }}" target="_blank">{{ post.title }}</a>
-          <svg width="2rem" height="2rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-            <path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path>
-          </svg>
-        {% else %}
-          <a class="post-title" href="{{ post.redirect | relative_url }}">{{ post.title }}</a>
+    {% unless post.featured %}
+    <article class="post-item">
+      <div class="post-content-wrapper">
+        {% if post.thumbnail %}
+        <div class="post-thumbnail">
+          <img src="{{ post.thumbnail | relative_url }}" alt="{{ post.title }}">
+        </div>
         {% endif %}
-      </h3>
-      <p>{{ post.description }}</p>
-      <p class="post-meta">
-        {{ read_time }} min read &nbsp; &middot; &nbsp;
-        {{ post.date | date: '%B %d, %Y' }}
-        {% if post.external_source %}
-        &nbsp; &middot; &nbsp; {{ post.external_source }}
-        {% endif %}
-      </p>
-      <p class="post-tags">
-        <a href="{{ year | prepend: '/blog/' | relative_url }}">
-          <i class="fa-solid fa-calendar fa-sm"></i> {{ year }} </a>
-
-          {% if tags != "" %}
-          &nbsp; &middot; &nbsp;
+        <div class="post-details">
+          <h2>
+            {% if post.redirect == blank %}
+              <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            {% elsif post.redirect contains '://' %}
+              <a href="{{ post.redirect }}" target="_blank">{{ post.title }}
+                <i class="fas fa-external-link-alt" style="font-size: 0.7em;"></i>
+              </a>
+            {% else %}
+              <a href="{{ post.redirect | relative_url }}">{{ post.title }}</a>
+            {% endif %}
+          </h2>
+          
+          <div class="post-meta-info">
+            <span class="meta-item">
+              <i class="fas fa-clock"></i>
+              {{ post.content | number_of_words | divided_by: 180 | plus: 1 }} min read
+            </span>
+            <span class="meta-item">
+              <i class="fas fa-calendar-alt"></i>
+              {{ post.date | date: "%B %d, %Y" }}
+            </span>
+            {% if post.external_source %}
+            <span class="meta-item">
+              <i class="fas fa-link"></i>
+              {{ post.external_source }}
+            </span>
+            {% endif %}
+          </div>
+          
+          <p class="post-excerpt">{{ post.description | default: post.excerpt | strip_html | truncate: 250 }}</p>
+          
+          {% if post.tags.size > 0 or post.categories.size > 0 %}
+          <div class="post-tags-list">
             {% for tag in post.tags %}
-            <a href="{{ tag | slugify | prepend: '/blog/tag/' | relative_url }}">
-              <i class="fa-solid fa-hashtag fa-sm"></i> {{ tag }}</a>
-              {% unless forloop.last %}
-                &nbsp;
-              {% endunless %}
-              {% endfor %}
-          {% endif %}
-
-          {% if categories != "" %}
-          &nbsp; &middot; &nbsp;
+              <a href="{{ tag | slugify | prepend: '/blog/tag/' | relative_url }}" class="tag-item">#{{ tag }}</a>
+            {% endfor %}
             {% for category in post.categories %}
-            <a href="{{ category | slugify | prepend: '/blog/category/' | relative_url }}">
-              <i class="fa-solid fa-tag fa-sm"></i> {{ category }}</a>
-              {% unless forloop.last %}
-                &nbsp;
-              {% endunless %}
-              {% endfor %}
+              <a href="{{ category | slugify | prepend: '/blog/category/' | relative_url }}" class="tag-item">{{ category }}</a>
+            {% endfor %}
+          </div>
           {% endif %}
-    </p>
-
-{% if post.thumbnail %}
-
-</div>
-
-  <div class="col-sm-3">
-    <img class="card-img" src="{{ post.thumbnail | relative_url }}" style="object-fit: cover; height: 90%" alt="image">
+        </div>
+      </div>
+    </article>
+    {% endunless %}
+    {% endfor %}
   </div>
-</div>
-{% endif %}
-    </li>
 
+  <!-- Pagination -->
+  {% if page.pagination.enabled %}
+  <nav class="modern-pagination">
+    {% if paginator.previous_page %}
+    <div class="page-item">
+      <a href="{{ paginator.previous_page_path | relative_url }}">
+        <i class="fas fa-chevron-left"></i>
+      </a>
+    </div>
+    {% else %}
+    <div class="page-item disabled">
+      <span><i class="fas fa-chevron-left"></i></span>
+    </div>
+    {% endif %}
+
+    {% for i in (1..paginator.total_pages) %}
+      {% if i == paginator.page %}
+      <div class="page-item active">
+        <span>{{ i }}</span>
+      </div>
+      {% else %}
+      <div class="page-item">
+        <a href="{{ site.baseurl }}/blog/{% if i > 1 %}page/{{ i }}/{% endif %}">{{ i }}</a>
+      </div>
+      {% endif %}
     {% endfor %}
 
-  </ul>
-
-{% if page.pagination.enabled %}
-{% include pagination.liquid %}
-{% endif %}
-
+    {% if paginator.next_page %}
+    <div class="page-item">
+      <a href="{{ paginator.next_page_path | relative_url }}">
+        <i class="fas fa-chevron-right"></i>
+      </a>
+    </div>
+    {% else %}
+    <div class="page-item disabled">
+      <span><i class="fas fa-chevron-right"></i></span>
+    </div>
+    {% endif %}
+  </nav>
+  {% endif %}
 </div>
+
+<script>
+// Simple search functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const searchInput = document.getElementById('blog-search-input');
+  const posts = document.querySelectorAll('.post-item, .featured-card');
+  
+  if (searchInput) {
+    searchInput.addEventListener('input', function(e) {
+      const searchTerm = e.target.value.toLowerCase();
+      
+      posts.forEach(post => {
+        const title = post.querySelector('h2, h3').textContent.toLowerCase();
+        const content = post.textContent.toLowerCase();
+        
+        if (title.includes(searchTerm) || content.includes(searchTerm)) {
+          post.style.display = '';
+        } else {
+          post.style.display = 'none';
+        }
+      });
+    });
+  }
+});
+</script>
