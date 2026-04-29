@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" fill="none">
+  <rect width="1600" height="1000" fill="#F1E7D8"/>
+  <rect x="120" y="120" width="1360" height="760" rx="38" fill="#FBF6ED" stroke="#D4C3A8"/>
+  <rect x="220" y="220" width="1160" height="560" rx="28" fill="#FDF9F2" stroke="#D9C9B2"/>
+  <circle cx="400" cy="500" r="90" fill="#244E45"/>
+  <circle cx="800" cy="500" r="90" fill="#9D6440"/>
+  <circle cx="1200" cy="500" r="90" fill="#244E45"/>
+  <path d="M490 500H710" stroke="#8A8E7C" stroke-width="10"/>
+  <path d="M890 500H1110" stroke="#8A8E7C" stroke-width="10"/>
+  <text x="220" y="820" fill="#1F2B2E" font-family="Georgia, serif" font-size="78">Agent Feedback Ops</text>
+</svg>

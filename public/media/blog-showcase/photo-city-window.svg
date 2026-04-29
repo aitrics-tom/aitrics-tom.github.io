@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" role="img" aria-label="Soft city skyline at sunset from a window">
+  <defs>
+    <linearGradient id="sky" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#ffe6bd"/>
+      <stop offset="0.52" stop-color="#f2c7a4"/>
+      <stop offset="1" stop-color="#9bb8c3"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" x2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.2"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.02"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="560" fill="url(#sky)"/>
+  <circle cx="720" cy="142" r="58" fill="#fff4c8" opacity="0.88"/>
+  <path d="M0 338c132-40 224-28 337-59 156-42 302-53 563-16v297H0Z" fill="#637b88" opacity="0.35"/>
+  <g fill="#26363d">
+    <rect x="74" y="276" width="58" height="211"/>
+    <rect x="154" y="242" width="86" height="245"/>
+    <rect x="275" y="296" width="70" height="191"/>
+    <rect x="380" y="222" width="92" height="265"/>
+    <rect x="500" y="312" width="66" height="175"/>
+    <rect x="596" y="254" width="102" height="233"/>
+    <rect x="732" y="304" width="70" height="183"/>
+  </g>
+  <g fill="#ffdca3" opacity="0.7">
+    <rect x="96" y="310" width="12" height="12"/>
+    <rect x="180" y="276" width="13" height="13"/>
+    <rect x="208" y="276" width="13" height="13"/>
+    <rect x="412" y="258" width="14" height="14"/>
+    <rect x="626" y="288" width="14" height="14"/>
+    <rect x="762" y="338" width="13" height="13"/>
+  </g>
+  <rect x="42" y="44" width="816" height="458" rx="26" fill="url(#glass)" stroke="#ffffff" stroke-opacity="0.45" stroke-width="8"/>
+  <path d="M453 48v450M46 396h810" stroke="#ffffff" stroke-opacity="0.24" stroke-width="7"/>
+  <rect y="486" width="900" height="74" fill="#4c3d32" opacity="0.78"/>
+</svg>

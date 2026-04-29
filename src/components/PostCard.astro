@@ -1,0 +1,41 @@
+---
+import { formatDate, getTrackInfo } from "../lib/content.js";
+
+const { post, featured = false } = Astro.props;
+const track = getTrackInfo(post.data.track);
+const href = `/blog/${post.data.slug}`;
+const formatLabel = post.data.format === "photo" ? "Photo Journal" : "Writing";
+---
+
+<article
+  class:list={["post-card", featured && "post-card-featured"]}
+  data-post-card
+  data-track={post.data.track}
+  data-language={post.data.language}
+  data-format={post.data.format}
+  data-tags={post.data.tags.join("|")}
+>
+  {post.data.cover && (
+    <a class="post-card-cover" href={href}>
+      <img src={post.data.cover} alt="" loading="lazy" />
+    </a>
+  )}
+
+  <div class="post-card-body">
+    <div class="meta-row">
+      <span class="pill pill-soft">{formatLabel}</span>
+      <span class="pill">{track.label}</span>
+      <span class="meta-muted">{post.data.language.toUpperCase()}</span>
+      <span class="meta-muted">{formatDate(post.data.publishedAt, post.data.language)}</span>
+    </div>
+
+    <h3>
+      <a href={href}>{post.data.title}</a>
+    </h3>
+    <p>{post.data.summary}</p>
+
+    <div class="tag-row">
+      {post.data.tags.map((tag: string) => <span class="tag-chip">{tag}</span>)}
+    </div>
+  </div>
+</article>

@@ -1,9 +1,26 @@
 {
-  "devDependencies": {
-    "@shopify/prettier-plugin-liquid": "1.4.0",
-    "prettier": "3.1.1"
+  "name": "ai-researcher-portfolio",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "packageManager": "npm@11.4.2",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "dev": "ASTRO_TELEMETRY_DISABLED=1 astro dev",
+    "start": "ASTRO_TELEMETRY_DISABLED=1 astro dev",
+    "build": "ASTRO_TELEMETRY_DISABLED=1 astro build",
+    "preview": "ASTRO_TELEMETRY_DISABLED=1 astro preview",
+    "check": "ASTRO_TELEMETRY_DISABLED=1 astro check"
   },
   "dependencies": {
-    "puppeteer": "^24.11.2"
+    "@astrojs/rss": "latest",
+    "@astrojs/sitemap": "latest",
+    "astro": "latest"
+  },
+  "devDependencies": {
+    "@astrojs/check": "latest",
+    "typescript": "latest"
   }
 }

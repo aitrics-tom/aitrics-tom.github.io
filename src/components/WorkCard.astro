@@ -1,0 +1,37 @@
+---
+import { workKindMeta } from "../data/site.js";
+
+const { item } = Astro.props;
+const href = `/portfolio/${item.data.slug}`;
+const links = Object.entries(item.data.links).filter(([, value]) => value) as Array<[string, string]>;
+---
+
+<article class="work-card">
+  {item.data.cover && (
+    <a class="work-card-cover" href={href}>
+      <img src={item.data.cover} alt="" loading="lazy" />
+    </a>
+  )}
+
+  <div class="work-card-body">
+    <div class="meta-row">
+      <span class="pill">{workKindMeta[item.data.kind as keyof typeof workKindMeta]}</span>
+      <span class="meta-muted">{item.data.year}</span>
+    </div>
+
+    <h3>
+      <a href={href}>{item.data.title}</a>
+    </h3>
+    <p>{item.data.summary}</p>
+
+    <div class="tag-row">
+      {item.data.topics.map((topic: string) => <span class="tag-chip">{topic}</span>)}
+    </div>
+
+    {links.length > 0 && (
+      <div class="inline-links">
+        {links.map(([label, value]) => <a href={value}>{label}</a>)}
+      </div>
+    )}
+  </div>
+</article>

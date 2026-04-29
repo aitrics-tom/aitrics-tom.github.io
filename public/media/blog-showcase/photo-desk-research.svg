@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" role="img" aria-label="Warm research desk with monitor, notes, and coffee">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#fff5df"/>
+      <stop offset="0.58" stop-color="#e6c59b"/>
+      <stop offset="1" stop-color="#8f6b47"/>
+    </linearGradient>
+    <linearGradient id="desk" x1="0" x2="1">
+      <stop offset="0" stop-color="#9b6a3d"/>
+      <stop offset="1" stop-color="#d8a96a"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f7fbff"/>
+      <stop offset="1" stop-color="#b8c9cf"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="620" fill="url(#bg)"/>
+  <rect y="430" width="900" height="190" fill="url(#desk)"/>
+  <g opacity="0.18" stroke="#5d3c22" stroke-width="2">
+    <path d="M0 468c110 18 218-20 330 0s238 17 570-8"/>
+    <path d="M0 525c160-25 315 24 455 0 166-28 284 5 445 21"/>
+  </g>
+  <rect x="178" y="130" width="430" height="286" rx="18" fill="#20242b"/>
+  <rect x="199" y="151" width="388" height="226" rx="8" fill="url(#screen)"/>
+  <g stroke="#b98642" stroke-width="5" fill="none" opacity="0.75">
+    <path d="M232 308c52-70 94 34 142-8s91-96 154-28"/>
+    <path d="M232 250h300"/>
+    <path d="M232 202h300"/>
+  </g>
+  <g stroke="#274b59" stroke-width="3" opacity="0.55">
+    <path d="M232 183h300M232 225h300M232 273h300M232 322h300"/>
+    <path d="M270 171v170M338 171v170M406 171v170M474 171v170M542 171v170"/>
+  </g>
+  <rect x="644" y="196" width="155" height="232" rx="14" fill="#f6efe2" stroke="#c7ad8d" stroke-width="5"/>
+  <path d="M675 248h88M675 283h74M675 318h92M675 354h70" stroke="#6e6258" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="740" cy="474" r="44" fill="#f5f0e6"/>
+  <circle cx="740" cy="474" r="27" fill="#2a211b"/>
+  <path d="M91 186c48-43 116-37 132 34-43-14-84 4-132-34Z" fill="#7a9b58"/>
+  <path d="M117 262c54-47 116-26 137 39-53-10-85 17-137-39Z" fill="#8baa62"/>
+  <path d="M138 428V246" stroke="#6d4a2a" stroke-width="13" stroke-linecap="round"/>
+  <rect x="352" y="401" width="75" height="35" rx="8" fill="#32343a"/>
+  <rect x="244" y="455" width="340" height="56" rx="13" fill="#2b2c31"/>
+  <g fill="#64656c">
+    <rect x="265" y="467" width="34" height="11" rx="2"/>
+    <rect x="309" y="467" width="34" height="11" rx="2"/>
+    <rect x="353" y="467" width="34" height="11" rx="2"/>
+    <rect x="397" y="467" width="34" height="11" rx="2"/>
+    <rect x="441" y="467" width="34" height="11" rx="2"/>
+    <rect x="485" y="467" width="34" height="11" rx="2"/>
+    <rect x="265" y="489" width="210" height="12" rx="2"/>
+  </g>
+  <circle cx="116" cy="501" r="35" fill="#f8f1df"/>
+  <path d="M85 501h62M116 470v62" stroke="#b98642" stroke-width="3" opacity="0.55"/>
+</svg>

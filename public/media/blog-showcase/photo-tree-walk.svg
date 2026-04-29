@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" role="img" aria-label="Quiet tree-lined walk in soft light">
+  <defs>
+    <linearGradient id="sky" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#fff1cf"/>
+      <stop offset="1" stop-color="#b8caa2"/>
+    </linearGradient>
+    <linearGradient id="path" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#d8bd8a"/>
+      <stop offset="1" stop-color="#8e734c"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="620" fill="url(#sky)"/>
+  <path d="M0 355c172-64 344-58 516-24 137 27 249 21 384-22v311H0Z" fill="#8faa74"/>
+  <path d="M342 620c28-153 66-246 111-322 52 83 98 179 137 322Z" fill="url(#path)"/>
+  <g stroke="#5e4b2d" stroke-width="14" stroke-linecap="round">
+    <path d="M116 620V216M232 620V184M668 620V186M776 620V226"/>
+  </g>
+  <g fill="#708f54">
+    <circle cx="116" cy="180" r="86"/>
+    <circle cx="232" cy="150" r="102"/>
+    <circle cx="668" cy="150" r="104"/>
+    <circle cx="776" cy="190" r="82"/>
+  </g>
+  <g fill="#8eaa63" opacity="0.82">
+    <circle cx="52" cy="245" r="70"/>
+    <circle cx="315" cy="218" r="74"/>
+    <circle cx="586" cy="222" r="76"/>
+    <circle cx="850" cy="260" r="68"/>
+  </g>
+  <path d="M452 310v270" stroke="#f4e2b8" stroke-width="3" opacity="0.36"/>
+</svg>

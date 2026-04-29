@@ -1,0 +1,37 @@
+---
+import { siteConfig } from "../data/site.js";
+---
+
+<footer class="site-footer">
+  <div class="shell footer-grid">
+    <div>
+      <p class="eyebrow">Personal site</p>
+      <h2>{siteConfig.title}</h2>
+      <p>
+        A portfolio for research-facing work, plus a wider notebook for writing, sports, photos, and
+        everything else that still shapes how I think.
+      </p>
+    </div>
+
+    <div>
+      <p class="footer-heading">Elsewhere</p>
+      <ul class="footer-links">
+        {
+          siteConfig.socialLinks.map((link) => (
+            <li>
+              <a href={link.href}>{link.label}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+
+    <div>
+      <p class="footer-heading">Contact</p>
+      <p>
+        <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>
+      </p>
+      <p>{siteConfig.location}</p>
+    </div>
+  </div>
+</footer>

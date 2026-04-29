@@ -1,0 +1,153 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { siteConfig } from "../data/site.js";
+
+const experience = [
+  {
+    period: "2023 – Present",
+    title: "AITRICS",
+    role: "AI Researcher",
+    detail: "Researching trustworthy and data-efficient machine learning for healthcare AI, with a focus on long-tailed, imbalanced, and clinically realistic data.",
+  },
+  {
+    period: "2021 – 2023",
+    title: "SIML Lab",
+    role: "M.S. Researcher",
+    detail: "Conducted research on long-tailed classification and stochastic representations under Prof. Juho Lee.",
+  },
+  {
+    period: "2020",
+    title: "MLV Lab",
+    role: "Undergraduate Research Intern",
+    detail: "Worked as an undergraduate research intern on machine learning research related to abnormal case analysis and early disease prediction. Adviser: Prof. Hyunwoo J. Kim.",
+  },
+  {
+    period: "2020",
+    title: "SW Maestro",
+    role: "11th Trainee",
+    detail: "Selected as a trainee in the 11th Software Maestro program, building software projects through intensive mentoring and development training.",
+  },
+];
+
+const education = [
+  {
+    period: "2021 – 2023",
+    title: "KAIST",
+    detail: "M.S. in Artificial Intelligence",
+  },
+  {
+    period: "2016 – 2021",
+    title: "Korea University",
+    detail: "B.S. in Computer Science; double major in Statistics",
+  },
+];
+
+const honors = [
+  {
+    period: "2019 – 2021",
+    title: "National Science & Engineering Scholarship",
+    detail: "Received a full-tuition national scholarship for science and engineering students.",
+  },
+];
+---
+
+<BaseLayout title="Resume" description={siteConfig.cv.summary} pageClass="resume-reference-page">
+  <section class="shell resume-reference">
+    <div class="resume-reference-head">
+      <div>
+        <h1>Resume</h1>
+        <span aria-hidden="true"></span>
+      </div>
+      <a class="resume-download" href={siteConfig.cv.pdfPath} download>Download CV</a>
+    </div>
+
+    <article class="resume-reference-section resume-summary-reference">
+      <div class="resume-reference-label">
+        <h2>Summary</h2>
+        <span aria-hidden="true"></span>
+      </div>
+      <div class="resume-reference-rule" aria-hidden="true"></div>
+      <div class="resume-reference-body">
+        <p>
+          AI researcher at AITRICS focused on trustworthy and data-efficient machine learning
+          for healthcare AI. My background spans long-tailed learning, stochastic
+          representations, semi-supervised debiasing, and software project experience from
+          SIML Lab, MLV Lab, and SW Maestro.
+        </p>
+      </div>
+    </article>
+
+    <article class="resume-reference-section">
+      <div class="resume-reference-label">
+        <h2>Experience</h2>
+        <span aria-hidden="true"></span>
+      </div>
+      <div class="resume-reference-rule" aria-hidden="true"></div>
+      <div class="resume-reference-body">
+        <div class="resume-timeline">
+          {
+            experience.map((item) => (
+              <div class="resume-timeline-item">
+                <p class="resume-period">{item.period}</p>
+                <div class="resume-timeline-dot" aria-hidden="true"></div>
+                <div class="resume-timeline-content">
+                  <h3>{item.title}</h3>
+                  <p class="resume-role">{item.role}</p>
+                  <p>{item.detail}</p>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </article>
+
+    <article class="resume-reference-section">
+      <div class="resume-reference-label">
+        <h2>Education</h2>
+        <span aria-hidden="true"></span>
+      </div>
+      <div class="resume-reference-rule" aria-hidden="true"></div>
+      <div class="resume-reference-body">
+        <div class="resume-timeline">
+          {
+            education.map((item) => (
+              <div class="resume-timeline-item">
+                <p class="resume-period">{item.period}</p>
+                <div class="resume-timeline-dot" aria-hidden="true"></div>
+                <div class="resume-timeline-content">
+                  <h3>{item.title}</h3>
+                  <p>{item.detail}</p>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </article>
+
+    <article class="resume-reference-section">
+      <div class="resume-reference-label">
+        <h2>Honors</h2>
+        <span aria-hidden="true"></span>
+      </div>
+      <div class="resume-reference-rule" aria-hidden="true"></div>
+      <div class="resume-reference-body">
+        <div class="resume-timeline">
+          {
+            honors.map((item) => (
+              <div class="resume-timeline-item">
+                <p class="resume-period">{item.period}</p>
+                <div class="resume-timeline-dot" aria-hidden="true"></div>
+                <div class="resume-timeline-content">
+                  <h3>{item.title}</h3>
+                  <p>{item.detail}</p>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </article>
+  </section>
+</BaseLayout>

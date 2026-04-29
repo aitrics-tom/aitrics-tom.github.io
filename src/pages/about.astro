@@ -1,0 +1,39 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { siteConfig } from "../data/site.js";
+
+const researchInterests = ["Long-tailed learning", "Healthcare AI", "Trustworthy ML"];
+
+---
+
+<BaseLayout title="About" description={siteConfig.about.intro} pageClass="about-reference-page">
+  <section class="shell about-reference">
+    <header class="about-reference-heading">
+      <h1>About</h1>
+      <span aria-hidden="true"></span>
+    </header>
+
+    <div class="about-reference-main">
+      <figure class="about-reference-portrait">
+        <img src={siteConfig.profileImage} alt={`Portrait of ${siteConfig.title}`} />
+      </figure>
+
+      <article class="about-reference-copy">
+        <h2>{siteConfig.title}</h2>
+        <p class="about-reference-role">{siteConfig.about.roleLine}</p>
+        <span class="about-reference-rule" aria-hidden="true"></span>
+
+        <div class="about-reference-bio">
+          {siteConfig.about.shortBio.map((paragraph) => <p>{paragraph}</p>)}
+        </div>
+
+        <section class="about-interests" aria-label="Research interests">
+          <h3>Research Interests</h3>
+          <div>
+            {researchInterests.map((item) => <span>{item}</span>)}
+          </div>
+        </section>
+      </article>
+    </div>
+  </section>
+</BaseLayout>

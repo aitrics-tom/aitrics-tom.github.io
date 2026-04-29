@@ -1,0 +1,41 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { siteConfig } from "../data/site.js";
+---
+
+<BaseLayout title="Contact" description={siteConfig.contact.intro}>
+  <section class="page-hero page-hero-wide shell">
+    <div class="page-hero-grid">
+      <div>
+        <p class="eyebrow">Contact</p>
+        <h1>Open to thoughtful conversations.</h1>
+        <p>{siteConfig.contact.intro}</p>
+      </div>
+
+      <aside class="paper-card hero-side-note">
+        <p class="eyebrow">Best channel</p>
+        <p>Email is still the clearest way to start a serious conversation.</p>
+        <a class="button-primary" href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section shell contact-layout">
+    <article class="paper-card contact-primary-card">
+      <h2>Best fit</h2>
+      <ul class="plain-list">
+        {siteConfig.contact.opportunities.map((item) => <li>{item}</li>)}
+      </ul>
+    </article>
+
+    <article class="paper-card contact-secondary-card">
+      <h2>Reach out</h2>
+      <p>
+        Email is the simplest way to start: <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>
+      </p>
+      <ul class="plain-list">
+        {siteConfig.socialLinks.map((link) => <li><a href={link.href}>{link.label}</a></li>)}
+      </ul>
+    </article>
+  </section>
+</BaseLayout>

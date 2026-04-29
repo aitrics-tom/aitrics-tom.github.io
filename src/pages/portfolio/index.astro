@@ -1,0 +1,126 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getPublishedWork } from "../../lib/content.js";
+
+const work = await getPublishedWork();
+const publications = work.filter((item) => item.data.kind === "paper");
+const projects = work.filter((item) => item.data.kind !== "paper");
+
+const linkLabels: Record<string, string> = {
+  paper: "Paper",
+  repo: "Code",
+  demo: "Demo",
+  slides: "Slides",
+};
+
+const fallbackProjects = [
+  {
+    title: "Healthcare AI",
+    summary: "Developing trustworthy AI systems for clinical decision support.",
+    cover: "/media/blog-showcase/photo-city-window.svg",
+    href: "/about",
+  },
+  {
+    title: "Long-tailed Learning",
+    summary: "Advancing generalization on long-tailed distributions with balanced learning.",
+    cover: "/media/blog-showcase/photo-notebook-coffee.svg",
+    href: "/portfolio/scad-long-tailed-semi-supervised-learning",
+  },
+];
+
+const projectCards = [
+  ...projects.map((item) => ({
+    title: item.data.venue ?? "AITRICS",
+    summary: "Building AI systems that turn time-series data into actionable predictions.",
+    cover: item.data.cover ?? "/media/blog-showcase/photo-desk-research.svg",
+    href: `/portfolio/${item.data.slug}`,
+  })),
+  ...fallbackProjects,
+].slice(0, 3);
+---
+
+<BaseLayout
+  title="Portfolio"
+  description="Selected publications and projects."
+  image="/media/blog-showcase/photo-desk-research.svg"
+  pageClass="portfolio-reference-page"
+>
+  <section class="shell portfolio-reference">
+    <header class="portfolio-reference-heading">
+      <h1>Portfolio</h1>
+      <span aria-hidden="true"></span>
+    </header>
+
+    <section class="portfolio-reference-section" aria-labelledby="publications-title">
+      <div class="portfolio-reference-title">
+        <h2 id="publications-title">Publications</h2>
+        <span aria-hidden="true"></span>
+      </div>
+
+      <div class="portfolio-publication-list">
+        {
+          publications.map((item) => {
+            const links = Object.entries(item.data.links).filter(([, value]) => value);
+
+            return (
+              <article class="portfolio-publication-row">
+                <time>{item.data.year}</time>
+                <div class="portfolio-publication-rule" aria-hidden="true"></div>
+                {item.data.cover && (
+                  <a class="portfolio-publication-thumb" href={`/portfolio/${item.data.slug}`}>
+                    <img src={item.data.cover} alt="" loading="lazy" />
+                  </a>
+                )}
+                <div class="portfolio-publication-main">
+                  <h3>
+                    <a href={`/portfolio/${item.data.slug}`}>{item.data.title}</a>
+                  </h3>
+                  {item.data.authors.length > 0 && (
+                    <p>
+                      {item.data.authors.map((author, index) => (
+                        <>
+                          {author === "Sunguk Jang" ? <strong>{author}</strong> : author}
+                          {index < item.data.authors.length - 1 ? ", " : ""}
+                        </>
+                      ))}
+                    </p>
+                  )}
+                  {links.length > 0 && (
+                    <div class="portfolio-publication-links">
+                      {links.map(([label, value]) => (
+                        <a href={value}>{linkLabels[label] ?? label}</a>
+                      ))}
+                    </div>
+                  )}
+                </div>
+                <p class="portfolio-publication-venue">{item.data.venue}</p>
+              </article>
+            );
+          })
+        }
+      </div>
+    </section>
+
+    <section class="portfolio-reference-section portfolio-projects-reference" aria-labelledby="projects-title">
+      <div class="portfolio-reference-title">
+        <h2 id="projects-title">Projects</h2>
+        <span aria-hidden="true"></span>
+      </div>
+
+      <div class="portfolio-project-grid">
+        {
+          projectCards.map((project) => (
+            <a class="portfolio-project-card" href={project.href}>
+              <img src={project.cover} alt="" loading="lazy" />
+              <div>
+                <h3>{project.title}</h3>
+                <span aria-hidden="true"></span>
+                <p>{project.summary}</p>
+              </div>
+            </a>
+          ))
+        }
+      </div>
+    </section>
+  </section>
+</BaseLayout>

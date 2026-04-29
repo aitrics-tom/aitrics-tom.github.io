@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" fill="none">
+  <rect width="1600" height="1000" fill="#EFE4D0"/>
+  <rect x="80" y="90" width="1440" height="820" rx="34" fill="#FAF5EC" stroke="#D6C6AE"/>
+  <rect x="150" y="170" width="520" height="300" rx="24" fill="#DCE4DF"/>
+  <rect x="730" y="170" width="720" height="470" rx="24" fill="#1B2A2B"/>
+  <rect x="150" y="530" width="520" height="220" rx="24" fill="#F3E1C9"/>
+  <path d="M215 402C280 320 348 298 420 348C490 396 560 388 625 236" stroke="#2F7D67" stroke-width="10" stroke-linecap="round"/>
+  <path d="M215 353C300 427 395 441 480 402C560 366 598 286 625 259" stroke="#C66A43" stroke-width="10" stroke-linecap="round"/>
+  <path d="M215 618H610" stroke="#C9B397" stroke-width="8"/>
+  <path d="M215 666H560" stroke="#C9B397" stroke-width="8"/>
+  <path d="M215 714H520" stroke="#C9B397" stroke-width="8"/>
+  <path d="M785 252H1370" stroke="#3F6159" stroke-width="6" opacity=".45"/>
+  <path d="M785 308H1305" stroke="#D59369" stroke-width="6" opacity=".6"/>
+  <path d="M785 364H1352" stroke="#6EA99A" stroke-width="6" opacity=".6"/>
+  <path d="M785 420H1268" stroke="#E0D2B4" stroke-width="6" opacity=".5"/>
+  <path d="M785 476H1338" stroke="#5F7F7A" stroke-width="6" opacity=".5"/>
+  <text x="150" y="840" fill="#203033" font-family="Georgia, serif" font-size="72">Observation over spectacle</text>
+</svg>

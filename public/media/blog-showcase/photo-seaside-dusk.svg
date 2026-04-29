@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" role="img" aria-label="Calm seaside at dusk with warm sky">
+  <defs>
+    <linearGradient id="sunset" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#fed7a8"/>
+      <stop offset="0.48" stop-color="#dfa3a2"/>
+      <stop offset="1" stop-color="#617f8f"/>
+    </linearGradient>
+    <linearGradient id="sea" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#8fb7bd"/>
+      <stop offset="1" stop-color="#345b66"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="560" fill="url(#sunset)"/>
+  <circle cx="704" cy="188" r="58" fill="#fff0ba" opacity="0.8"/>
+  <path d="M0 287c90-31 164-30 244-2 81 28 179 35 284 0 124-41 226-33 372 8v267H0Z" fill="url(#sea)"/>
+  <path d="M0 391c92 29 174 26 247-4 95-39 196-31 303 14 100 42 201 32 350-21v180H0Z" fill="#e8c692"/>
+  <path d="M0 344c84 22 170 19 258-9 94-30 192-24 294 17 89 36 198 31 348-18" stroke="#fff7df" stroke-width="11" fill="none" opacity="0.66"/>
+  <path d="M0 431c102 20 185 17 282-13 117-36 229-29 342 15 86 34 169 25 276-17" stroke="#fff7df" stroke-width="8" fill="none" opacity="0.46"/>
+  <path d="M72 284c73-96 158-130 254-100 31 10 56 28 74 52-91-9-181 16-328 48Z" fill="#405543" opacity="0.75"/>
+</svg>

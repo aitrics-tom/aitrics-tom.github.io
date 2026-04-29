@@ -1,0 +1,75 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { siteConfig } from "../data/site.js";
+---
+
+<BaseLayout
+  title="Home"
+  description={siteConfig.description}
+  image="/media/hero-desktop.png"
+  pageClass="home-page"
+>
+  <section class="hero-home hero-reference">
+    <div class="hero-scene">
+      <img src="/media/hero-desktop.png" alt={siteConfig.hero.alt} />
+      <div class="hero-scene-overlay"></div>
+    </div>
+
+    <div class="hero-reference-content">
+      <div class="hero-copy">
+        <p class="hero-greeting">Hello, I&apos;m</p>
+        <h1 class="hero-name" aria-label={siteConfig.title}>
+          <img class="hero-signature" src="/media/sunguk-signature.png" alt="" />
+        </h1>
+        <p class="hero-role">{siteConfig.role}</p>
+
+        <div class="hero-actions hero-actions-reference">
+          <a class="button-primary" href={siteConfig.hero.primaryCta.href}>{siteConfig.hero.primaryCta.label}</a>
+          <a class="button-secondary" href={siteConfig.hero.secondaryCta.href}>{siteConfig.hero.secondaryCta.label}</a>
+        </div>
+
+        <div class="hero-social-links" aria-label="Social links">
+          <a href="https://github.com/aitrics-tom" target="_blank" rel="noreferrer" aria-label="GitHub">
+            <svg class="icon-fill icon-github" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 2.7a9.6 9.6 0 0 0-3 18.7c.5.1.7-.2.7-.5v-1.8c-2.9.6-3.5-1.2-3.5-1.2-.5-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 0 1.6 1.1 1.6 1.1.9 1.5 2.4 1.1 3 .8.1-.7.4-1.1.7-1.4-2.3-.3-4.7-1.2-4.7-5.1 0-1.1.4-2.1 1.1-2.8-.1-.3-.5-1.4.1-2.8 0 0 .9-.3 2.9 1.1.8-.2 1.7-.3 2.6-.3s1.8.1 2.6.3c2-1.4 2.9-1.1 2.9-1.1.6 1.4.2 2.5.1 2.8.7.7 1.1 1.7 1.1 2.8 0 4-2.4 4.8-4.7 5.1.4.3.7 1 .7 2v2.5c0 .3.2.6.7.5A9.6 9.6 0 0 0 12 2.7Z" />
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/sunguk-jang-9587301a2/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+            <svg class="icon-linkedin" viewBox="0 0 24 24" aria-hidden="true">
+              <defs>
+                <mask id="linkedin-cutout">
+                  <rect width="24" height="24" fill="#fff" />
+                  <circle cx="8.15" cy="7.35" r="1.35" fill="#000" />
+                  <rect x="6.95" y="9.95" width="2.4" height="7.1" rx="0.25" fill="#000" />
+                  <path
+                    fill="#000"
+                    d="M11.25 9.95h2.32v1.03c.43-.68 1.2-1.2 2.36-1.2 1.95 0 3.05 1.28 3.05 3.65v3.62h-2.45v-3.35c0-1.07-.42-1.6-1.28-1.6-.94 0-1.55.65-1.55 1.78v3.17h-2.45v-7.1Z"
+                  />
+                </mask>
+              </defs>
+              <rect x="3.05" y="3.05" width="17.9" height="17.9" rx="1.7" mask="url(#linkedin-cutout)" />
+            </svg>
+          </a>
+          <a href={`mailto:${siteConfig.email}`} aria-label="Email">
+            <svg class="icon-line icon-mail" viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3.8" y="6.2" width="16.4" height="11.6" rx="1.8" />
+              <path d="m4.6 7.2 7.4 6 7.4-6" />
+            </svg>
+          </a>
+          <a href="https://instagram.com/__yellow_gradient" target="_blank" rel="noreferrer" aria-label="Instagram">
+            <svg class="icon-line icon-instagram" viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="4.5" y="4.5" width="15" height="15" rx="4.2" />
+              <circle cx="12" cy="12" r="3.4" />
+              <circle cx="16.4" cy="7.6" r=".8" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <a class="home-scroll-link" href="/about">
+      <span>Discover the Story</span>
+      <span class="home-scroll-arrow" aria-hidden="true">↓</span>
+    </a>
+  </section>
+</BaseLayout>

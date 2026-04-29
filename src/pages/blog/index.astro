@@ -1,0 +1,168 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { formatDate, getPublishedPosts } from "../../lib/content.js";
+import { siteConfig } from "../../data/site.js";
+
+const posts = await getPublishedPosts();
+const photoPosts = posts.filter((post) => post.data.format === "photo");
+const writingPosts = posts.filter((post) => post.data.format !== "photo");
+const featuredWriting = writingPosts.find((post) => post.data.featured) ?? writingPosts[0];
+const sideWritingPosts = writingPosts.filter((post) => post.id !== featuredWriting?.id).slice(0, 2);
+const recentPosts = writingPosts.slice(0, 3);
+type BlogPost = (typeof posts)[number];
+
+const readingTime = (post: BlogPost) => {
+  const words = `${post.body ?? ""} ${post.data.summary ?? ""}`.trim().split(/\s+/).filter(Boolean).length;
+  return `${Math.max(3, Math.ceil(words / 180))} min read`;
+};
+
+const tagLabel = (post: BlogPost) => {
+  const tag = post.data.tags[0] ?? post.data.track;
+  return tag === "llm" ? "AI" : tag;
+};
+const imageBase = "/media/blog-showcase";
+const photoLinks = photoPosts.length > 0 ? photoPosts : posts;
+const photoTiles = [
+  {
+    src: `${imageBase}/photo-desk-research.svg`,
+    alt: "A warm research desk with monitor and notes",
+    href: `/blog/${photoLinks[0]?.data.slug ?? featuredWriting?.data.slug}`,
+  },
+  {
+    src: `${imageBase}/photo-city-window.svg`,
+    alt: "A quiet city skyline at sunset",
+    href: `/blog/${photoLinks[1]?.data.slug ?? featuredWriting?.data.slug}`,
+  },
+  {
+    src: `${imageBase}/photo-notebook-coffee.svg`,
+    alt: "Notebook, coffee, and morning desk light",
+    href: `/blog/${photoLinks[0]?.data.slug ?? featuredWriting?.data.slug}`,
+  },
+  {
+    src: `${imageBase}/photo-baseball-still.svg`,
+    alt: "Baseball glove and ball on a wooden desk",
+    href: `/blog/${posts.find((post) => post.data.tags.includes("baseball"))?.data.slug ?? featuredWriting?.data.slug}`,
+  },
+  {
+    src: `${imageBase}/photo-tree-walk.svg`,
+    alt: "A quiet tree-lined walk",
+    href: `/blog/${photoLinks[1]?.data.slug ?? featuredWriting?.data.slug}`,
+  },
+  {
+    src: `${imageBase}/photo-seaside-dusk.svg`,
+    alt: "Calm seaside at dusk",
+    href: `/blog/${photoLinks[0]?.data.slug ?? featuredWriting?.data.slug}`,
+  },
+];
+---
+
+<BaseLayout
+  title="Blog"
+  description={siteConfig.blogIntro}
+  image={`${imageBase}/writing-featured-notebook.svg`}
+  pageClass="blog-reference-page"
+>
+  <section class="shell blog-reference">
+    <header class="blog-reference-heading">
+      <h1>Blog</h1>
+      <span aria-hidden="true"></span>
+    </header>
+
+    <div class="blog-reference-grid">
+      <section id="photo-journal" class="blog-photo-reference" aria-labelledby="photo-journal-title">
+        <h2 id="photo-journal-title">Photo Journal</h2>
+        <div class="blog-photo-mosaic">
+          {
+            photoTiles.map((tile) => (
+              <a href={tile.href} class="blog-photo-tile">
+                <img src={tile.src} alt={tile.alt} loading="lazy" />
+              </a>
+            ))
+          }
+        </div>
+        <a class="blog-reference-button" href="#recent-posts">
+          View Photo Journal
+          <span aria-hidden="true">-></span>
+        </a>
+      </section>
+
+      <section class="blog-writing-reference" aria-labelledby="writing-title">
+        <h2 id="writing-title">Writing</h2>
+
+        {
+          featuredWriting && (
+            <a class="blog-featured-writing" href={`/blog/${featuredWriting.data.slug}`}>
+              <div class="blog-featured-copy">
+                <p>Featured</p>
+                <h3>{featuredWriting.data.title}</h3>
+                <span class="blog-tag">{tagLabel(featuredWriting)}</span>
+                <p class="blog-featured-summary">{featuredWriting.data.summary}</p>
+                <p class="blog-meta">
+                  {formatDate(featuredWriting.data.publishedAt, featuredWriting.data.language)}
+                  <span>·</span>
+                  {readingTime(featuredWriting)}
+                </p>
+              </div>
+              <img
+                src={`${imageBase}/writing-featured-notebook.svg`}
+                alt=""
+                loading="lazy"
+              />
+            </a>
+          )
+        }
+
+        <div class="blog-writing-list">
+          {
+            sideWritingPosts.map((post, index) => (
+              <a class="blog-writing-row" href={`/blog/${post.data.slug}`}>
+                <img
+                  src={index === 0 ? `${imageBase}/photo-city-window.svg` : `${imageBase}/photo-desk-research.svg`}
+                  alt=""
+                  loading="lazy"
+                />
+                <div>
+                  <h3>{post.data.title}</h3>
+                  <p>
+                    {formatDate(post.data.publishedAt, post.data.language)}
+                    <span>·</span>
+                    {readingTime(post)}
+                  </p>
+                </div>
+                <span class="blog-tag">{tagLabel(post)}</span>
+                <span class="blog-row-arrow" aria-hidden="true">-></span>
+              </a>
+            ))
+          }
+        </div>
+
+        <a class="blog-reference-button blog-writing-button" href="#recent-posts">
+          View All Writing
+          <span aria-hidden="true">-></span>
+        </a>
+      </section>
+    </div>
+
+    <section id="recent-posts" class="blog-recent-reference" aria-labelledby="recent-posts-title">
+      <h2 id="recent-posts-title">Recent Posts</h2>
+      <div class="blog-recent-list">
+        {
+          recentPosts.map((post) => (
+            <a class="blog-recent-row" href={`/blog/${post.data.slug}`}>
+              <h3>{post.data.title}</h3>
+              <span class="blog-tag">{tagLabel(post)}</span>
+              <time datetime={post.data.publishedAt.toISOString()}>
+                {formatDate(post.data.publishedAt, post.data.language)}
+              </time>
+              <span>{readingTime(post)}</span>
+            </a>
+          ))
+        }
+      </div>
+      <a class="blog-recent-link" href="#writing-title">
+        View All Writing Posts
+        <span aria-hidden="true">-></span>
+      </a>
+    </section>
+  </section>
+</BaseLayout>

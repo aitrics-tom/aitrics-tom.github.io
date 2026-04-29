@@ -1,0 +1,49 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getPublishedPosts, formatDate, getTrackInfo } from "../../lib/content.js";
+import { render } from "astro:content";
+
+export async function getStaticPaths() {
+  const posts = await getPublishedPosts();
+
+  return posts.map((post) => ({
+    params: { slug: post.data.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+const track = getTrackInfo(post.data.track);
+const formatLabel = post.data.format === "photo" ? "Photo Journal" : "Writing";
+---
+
+<BaseLayout
+  title={post.data.title}
+  description={post.data.summary}
+  image={post.data.cover ?? "/media/hero-desktop.png"}
+  lang={post.data.language}
+  type="article"
+>
+  <article class="content-page shell">
+    <header class="content-header">
+      <div class="meta-row">
+        <span class="pill pill-soft">{formatLabel}</span>
+        <span class="pill">{track.label}</span>
+        <span class="meta-muted">{post.data.language.toUpperCase()}</span>
+        <span class="meta-muted">{formatDate(post.data.publishedAt, post.data.language)}</span>
+      </div>
+      <h1>{post.data.title}</h1>
+      <p class="content-summary">{post.data.summary}</p>
+      <div class="tag-row">
+        {post.data.tags.map((tag) => <span class="tag-chip">{tag}</span>)}
+      </div>
+    </header>
+
+    {post.data.cover && <img class="content-cover" src={post.data.cover} alt="" />}
+
+    <div class="prose">
+      <Content />
+    </div>
+  </article>
+</BaseLayout>

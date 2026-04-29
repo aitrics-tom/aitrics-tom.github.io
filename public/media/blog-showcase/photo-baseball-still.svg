@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" role="img" aria-label="Baseball glove and ball on a wooden desk">
+  <defs>
+    <linearGradient id="wood" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f5d18e"/>
+      <stop offset="0.55" stop-color="#a76532"/>
+      <stop offset="1" stop-color="#573419"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.78" cy="0.2" r="0.7">
+      <stop offset="0" stop-color="#fff0ba" stop-opacity="0.82"/>
+      <stop offset="1" stop-color="#fff0ba" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="900" height="560" fill="url(#wood)"/>
+  <rect width="900" height="560" fill="url(#glow)"/>
+  <ellipse cx="408" cy="351" rx="258" ry="129" fill="#7b3f20" opacity="0.94"/>
+  <path d="M189 359c70-144 226-210 365-146 76 35 116 96 135 166-86-48-178-58-263-19-75 34-153 34-237-1Z" fill="#9a562b"/>
+  <path d="M256 358c65-70 164-98 253-68 58 20 98 58 122 102-77-25-148-24-213 4-54 23-107 15-162-38Z" fill="#c47a3f"/>
+  <path d="M211 343c42 39 81 64 119 77M306 269c47 54 88 92 124 116M433 230c20 70 39 121 58 153M561 275c-7 56-10 94-8 116" stroke="#5d2f19" stroke-width="10" stroke-linecap="round" opacity="0.6"/>
+  <circle cx="377" cy="319" r="76" fill="#f8f1df"/>
+  <path d="M318 279c24 22 24 65 0 88M436 279c-24 22-24 65 0 88" fill="none" stroke="#b84532" stroke-width="7" stroke-linecap="round" stroke-dasharray="7 10"/>
+  <g opacity="0.16" stroke="#2a180d" stroke-width="2">
+    <path d="M0 456c120 28 252-18 388 12 150 33 318-12 512 5"/>
+    <path d="M0 501c190-26 304 24 486-6 160-26 271 8 414 17"/>
+  </g>
+</svg>

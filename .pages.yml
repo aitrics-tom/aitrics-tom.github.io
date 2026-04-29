@@ -1,0 +1,117 @@
+media:
+  - name: site_media
+    label: Site Media
+    input: public/media
+    output: /media
+    categories: [image]
+    rename: safe
+  - name: site_files
+    label: Site Files
+    input: public/files
+    output: /files
+    categories: [document]
+
+content:
+  - name: posts
+    label: Blog Posts
+    type: collection
+    path: src/content/posts
+    format: yaml-frontmatter
+    filename:
+      template: "{fields.slug}.md"
+      field: create
+    view:
+      primary: title
+      sort: publishedAt
+      order: desc
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: slug
+        label: Slug
+        type: string
+        required: true
+      - name: summary
+        label: Summary
+        type: text
+        required: true
+      - name: publishedAt
+        label: Published At
+        type: date
+        required: true
+      - name: updatedAt
+        label: Updated At
+        type: date
+      - name: language
+        label: Language
+        type: select
+        required: true
+        options:
+          values:
+            - label: English
+              value: en
+            - label: Korean
+              value: ko
+      - name: track
+        label: Track
+        type: select
+        required: true
+        options:
+          values:
+            - label: Research / Build
+              value: professional
+            - label: Personal
+              value: personal
+            - label: Culture
+              value: culture
+            - label: Creative
+              value: creative
+      - name: tags
+        label: Tags
+        type: string
+        list: true
+      - name: featured
+        label: Featured
+        type: boolean
+      - name: status
+        label: Status
+        type: select
+        required: true
+        options:
+          values:
+            - label: Published
+              value: published
+            - label: Draft
+              value: draft
+      - name: cover
+        label: Cover Image
+        type: image
+        options:
+          media: site_media
+          path: posts
+      - name: body
+        label: Body
+        type: rich-text
+        options:
+          format: markdown
+          media: site_media
+          path: posts
+          rename: safe
+
+settings:
+  content:
+    merge: true
+  commit:
+    identity: app
+    templates:
+      create: "content(create): {path}"
+      update: "content(update): {path}"
+      delete: "content(delete): {path}"
+      rename: "content(rename): {oldPath} -> {newPath}"
+
+actions:
+  - name: deploy-site
+    label: Deploy site
+    workflow: deploy.yml

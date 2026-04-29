@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" fill="none">
+  <rect width="1600" height="1000" fill="#EDE2CF"/>
+  <rect x="100" y="84" width="1120" height="832" rx="24" fill="#FBF6ED" stroke="#CDBB9D"/>
+  <rect x="1220" y="210" width="250" height="520" rx="20" fill="#DDE6DE" stroke="#B7C8B8"/>
+  <path d="M180 220H1120" stroke="#D7C6AE" stroke-width="4"/>
+  <path d="M180 300H1120" stroke="#D7C6AE" stroke-width="4"/>
+  <path d="M180 380H1120" stroke="#D7C6AE" stroke-width="4"/>
+  <path d="M180 460H1120" stroke="#D7C6AE" stroke-width="4"/>
+  <path d="M180 540H1120" stroke="#D7C6AE" stroke-width="4"/>
+  <path d="M180 620H1120" stroke="#D7C6AE" stroke-width="4"/>
+  <path d="M180 700H1120" stroke="#D7C6AE" stroke-width="4"/>
+  <circle cx="250" cy="300" r="18" fill="#264F45"/>
+  <circle cx="250" cy="460" r="18" fill="#9D6440"/>
+  <circle cx="250" cy="620" r="18" fill="#264F45"/>
+  <text x="330" y="235" fill="#223033" font-family="Georgia, serif" font-size="72">Question → slices → failures → decision</text>
+  <text x="1260" y="300" fill="#264F45" font-family="Arial, sans-serif" font-size="32">Stable structure</text>
+  <text x="1260" y="360" fill="#5F665F" font-family="Arial, sans-serif" font-size="28">Readable a week later</text>
+  <text x="1260" y="420" fill="#5F665F" font-family="Arial, sans-serif" font-size="28">Good for collaboration</text>
+</svg>

@@ -1,0 +1,53 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { workKindMeta } from "../../data/site.js";
+import { getPublishedWork } from "../../lib/content.js";
+import { render } from "astro:content";
+
+export async function getStaticPaths() {
+  const work = await getPublishedWork();
+
+  return work.map((item) => ({
+    params: { slug: item.data.slug },
+    props: { item },
+  }));
+}
+
+const { item } = Astro.props;
+const { Content } = await render(item);
+const links = Object.entries(item.data.links).filter(([, value]) => value);
+---
+
+<BaseLayout
+  title={item.data.title}
+  description={item.data.summary}
+  image={item.data.cover ?? "/media/work/research-board.svg"}
+  lang={item.data.language}
+  type="article"
+  pageClass="minimal-page"
+>
+  <article class="content-page shell">
+    <header class="content-header">
+      <div class="meta-row">
+        <span class="pill">{workKindMeta[item.data.kind]}</span>
+        <span class="meta-muted">{item.data.year}</span>
+      </div>
+      <h1>{item.data.title}</h1>
+      <p class="content-summary">{item.data.summary}</p>
+      <div class="tag-row">
+        {item.data.topics.map((topic) => <span class="tag-chip">{topic}</span>)}
+      </div>
+      {links.length > 0 && (
+        <div class="inline-links">
+          {links.map(([label, value]) => <a href={value}>{label}</a>)}
+        </div>
+      )}
+    </header>
+
+    {item.data.cover && <img class="content-cover" src={item.data.cover} alt="" />}
+
+    <div class="prose">
+      <Content />
+    </div>
+  </article>
+</BaseLayout>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" fill="none">
+  <rect width="1600" height="1000" fill="#F4EBDD"/>
+  <rect x="110" y="120" width="1380" height="760" rx="36" fill="#F9F2E6" stroke="#D9C9B1"/>
+  <rect x="170" y="200" width="700" height="540" rx="28" fill="#FDF8EF" stroke="#D9C9B1"/>
+  <rect x="920" y="200" width="500" height="160" rx="24" fill="#DAE3D8"/>
+  <rect x="920" y="400" width="500" height="160" rx="24" fill="#F4E0CC"/>
+  <rect x="920" y="600" width="500" height="160" rx="24" fill="#E9DDD0"/>
+  <text x="230" y="320" fill="#1F2A2E" font-family="Georgia, serif" font-size="82">Calm evidence</text>
+  <text x="230" y="410" fill="#5F665F" font-family="Arial, sans-serif" font-size="36">A portfolio should make the work legible</text>
+  <text x="230" y="470" fill="#5F665F" font-family="Arial, sans-serif" font-size="36">before it tries to feel impressive.</text>
+</svg>

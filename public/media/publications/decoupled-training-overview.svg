@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-label="Overview diagram for decoupled training with stochastic representations">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f6ead7"/>
+      <stop offset="1" stop-color="#b99063"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.72" cy="0.22" r="0.7">
+      <stop offset="0" stop-color="#fff6d2" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#fff6d2" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="640" height="420" rx="26" fill="url(#bg)"/>
+  <rect width="640" height="420" rx="26" fill="url(#glow)"/>
+  <rect x="44" y="45" width="552" height="330" rx="18" fill="#fffaf0" opacity="0.8"/>
+  <g transform="translate(76 82)">
+    <text x="0" y="0" fill="#8c672f" font-family="Georgia, serif" font-size="22">Stochastic representation</text>
+    <g opacity="0.9">
+      <circle cx="68" cy="88" r="12" fill="#b98642"/>
+      <circle cx="108" cy="72" r="15" fill="#b98642" opacity="0.78"/>
+      <circle cx="132" cy="119" r="10" fill="#b98642" opacity="0.66"/>
+      <circle cx="84" cy="138" r="13" fill="#b98642" opacity="0.72"/>
+      <circle cx="206" cy="84" r="11" fill="#5f7f8c"/>
+      <circle cx="246" cy="112" r="14" fill="#5f7f8c" opacity="0.82"/>
+      <circle cx="215" cy="151" r="12" fill="#5f7f8c" opacity="0.66"/>
+      <circle cx="323" cy="92" r="12" fill="#6d8a58"/>
+      <circle cx="364" cy="130" r="14" fill="#6d8a58" opacity="0.76"/>
+      <circle cx="336" cy="168" r="10" fill="#6d8a58" opacity="0.62"/>
+    </g>
+    <ellipse cx="104" cy="105" rx="70" ry="54" fill="none" stroke="#b98642" stroke-width="4" stroke-dasharray="9 10"/>
+    <ellipse cx="228" cy="118" rx="68" ry="58" fill="none" stroke="#5f7f8c" stroke-width="4" stroke-dasharray="9 10"/>
+    <ellipse cx="342" cy="130" rx="62" ry="62" fill="none" stroke="#6d8a58" stroke-width="4" stroke-dasharray="9 10"/>
+    <path d="M424 119h76" stroke="#202228" stroke-width="6" stroke-linecap="round"/>
+    <path d="M482 96l30 23-30 23" fill="none" stroke="#202228" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <g transform="translate(394 186)">
+      <text x="0" y="0" fill="#8c672f" font-family="Georgia, serif" font-size="22">Decoupled head</text>
+      <rect x="0" y="32" width="148" height="58" rx="12" fill="#202228"/>
+      <rect x="17" y="47" width="38" height="12" rx="3" fill="#f3d39a"/>
+      <rect x="17" y="66" width="88" height="10" rx="3" fill="#c9d9e0"/>
+      <circle cx="123" cy="61" r="14" fill="#b98642"/>
+    </g>
+    <path d="M0 268c88 24 170-18 262 7 88 24 181-10 293 6" stroke="#6f4c2c" stroke-width="7" fill="none" stroke-linecap="round" opacity="0.38"/>
+  </g>
+</svg>
