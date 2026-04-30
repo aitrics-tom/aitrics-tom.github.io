@@ -361,7 +361,7 @@ main {
   font-family: "Cormorant Garamond", var(--display);
   font-size: clamp(1.8rem, 2.05vw, 2.05rem);
   line-height: 1.1;
-  text-align: center;
+  text-align: left;
   clip-path: inset(0 100% 0 0);
   animation: revealGreeting 900ms steps(10, end) 680ms forwards;
 }
