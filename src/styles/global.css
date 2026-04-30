@@ -408,8 +408,8 @@ main {
 .hero-role::after {
   content: "";
   display: block;
-  width: 7.8rem;
-  height: 2px;
+  width: 11.2rem;
+  height: 4px;
   margin: 0.6rem auto 0;
   background: #f2c84b;
   transform: scaleX(0);
@@ -440,8 +440,8 @@ main {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 2.85rem;
-  height: 2.85rem;
+  width: 3.35rem;
+  height: 3.35rem;
   color: #202228;
   padding: 0;
   border-radius: 12px;
@@ -457,8 +457,8 @@ main {
 
 .hero-social-links svg {
   display: block;
-  width: 2.05rem;
-  height: 2.05rem;
+  width: 2.45rem;
+  height: 2.45rem;
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-width: 2.15;
@@ -472,25 +472,25 @@ main {
 }
 
 .hero-social-links .icon-github {
-  width: 2.18rem;
-  height: 2.18rem;
+  width: 2.58rem;
+  height: 2.58rem;
 }
 
 .hero-social-links .icon-mail {
-  width: 2.2rem;
-  height: 2.2rem;
+  width: 2.6rem;
+  height: 2.6rem;
   stroke-width: 2.35;
 }
 
 .hero-social-links .icon-instagram {
-  width: 2.04rem;
-  height: 2.04rem;
+  width: 2.42rem;
+  height: 2.42rem;
   stroke-width: 2.1;
 }
 
 .hero-social-links .icon-linkedin {
-  width: 2.05rem;
-  height: 2.05rem;
+  width: 2.45rem;
+  height: 2.45rem;
   fill: currentColor;
 }
 
@@ -523,8 +523,8 @@ main {
 }
 
 .hero-actions-reference .button-primary {
-  min-width: 11.8rem;
-  min-height: 4.25rem;
+  min-width: 9.8rem;
+  min-height: 3.55rem;
   background: #f2c84b;
   border: 1px solid rgba(119, 82, 14, 0.18);
   border-radius: 18px;
@@ -533,7 +533,7 @@ main {
     0 14px 28px rgba(120, 80, 20, 0.12),
     inset 0 1px 0 rgba(255, 255, 255, 0.34);
   font-family: "Cormorant Garamond", var(--display);
-  font-size: 1.58rem;
+  font-size: 1.4rem;
   font-weight: 600;
   letter-spacing: 0.01em;
   text-shadow: none;
@@ -542,8 +542,8 @@ main {
 }
 
 .hero-actions-reference .button-secondary {
-  min-width: 11.8rem;
-  min-height: 4.25rem;
+  min-width: 9.8rem;
+  min-height: 3.55rem;
   background: #f2c84b;
   border: 1px solid rgba(119, 82, 14, 0.18);
   border-radius: 18px;
@@ -552,7 +552,7 @@ main {
     0 14px 28px rgba(120, 80, 20, 0.12),
     inset 0 1px 0 rgba(255, 255, 255, 0.34);
   font-family: "Cormorant Garamond", var(--display);
-  font-size: 1.58rem;
+  font-size: 1.4rem;
   font-weight: 600;
   letter-spacing: 0.01em;
   text-shadow: none;
