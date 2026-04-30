@@ -11,7 +11,10 @@ import { siteConfig } from "../data/site.js";
 >
   <section class="hero-home hero-reference">
     <div class="hero-scene">
-      <img src="/media/hero-desktop.png" alt={siteConfig.hero.alt} />
+      <picture>
+        <source media="(max-width: 760px)" srcset="/media/hero-mobile.png" />
+        <img src="/media/hero-desktop.png" alt={siteConfig.hero.alt} />
+      </picture>
       <div class="hero-scene-overlay"></div>
     </div>
 

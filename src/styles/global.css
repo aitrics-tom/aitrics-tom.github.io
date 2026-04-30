@@ -292,6 +292,7 @@ main {
 }
 
 .hero-reference .hero-scene {
+  height: 100svh;
   min-height: 100svh;
   border-radius: 0;
   border: 0;
@@ -300,8 +301,16 @@ main {
 }
 
 .hero-reference .hero-scene img {
+  position: absolute;
+  inset: 0;
   filter: saturate(1.18) contrast(1.05) brightness(1.02) sepia(0.05) blur(0.12px);
   animation: heroImageReveal 1400ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.hero-reference .hero-scene picture {
+  position: absolute;
+  inset: 0;
+  display: block;
 }
 
 .hero-reference .hero-scene-overlay {
@@ -2576,6 +2585,29 @@ button.tag-chip {
 }
 
 @media (max-width: 1080px) {
+  .hero-reference-content {
+    padding: 2rem 1.5rem 7rem;
+  }
+
+  .hero-reference-content::before {
+    top: 43%;
+    width: min(680px, 88vw);
+    height: min(420px, 52vh);
+  }
+
+  .hero-copy {
+    width: min(42rem, calc(100vw - 3rem));
+  }
+
+  .hero-greeting,
+  .hero-name {
+    width: min(40rem, calc(100vw - 3rem));
+  }
+
+  .home-scroll-link {
+    bottom: max(1.7rem, env(safe-area-inset-bottom));
+  }
+
   .focus-grid,
   .card-grid,
   .facts-grid,
@@ -2665,16 +2697,16 @@ button.tag-chip {
   }
 
   .hero-home {
-    min-height: auto;
-    padding-top: 1rem;
+    min-height: 100svh;
+    padding-top: 0;
   }
 
   .hero-scene {
-    min-height: 38rem;
+    min-height: 100svh;
   }
 
   .hero-scene img {
-    object-position: center center;
+    object-position: 50% 50%;
   }
 
   .hero-card {
@@ -2687,24 +2719,117 @@ button.tag-chip {
   }
 
   .hero-reference-content {
-    padding: 1.5rem;
+    justify-content: center;
+    padding: 1.25rem 1.2rem 7.25rem;
+  }
+
+  .hero-reference-content::before {
+    top: 43%;
+    width: 120vw;
+    height: 28rem;
+    opacity: 0.95;
   }
 
   .hero-copy {
-    width: 100%;
+    width: min(22.5rem, calc(100vw - 2rem));
+    margin-top: -1.4rem;
   }
 
   .hero-greeting,
   .hero-name {
-    width: min(28rem, calc(100vw - 2rem));
+    width: min(22.5rem, calc(100vw - 2rem));
   }
 
   .hero-greeting {
-    padding-left: 0.9rem;
+    padding-left: 0;
+    font-size: clamp(1.35rem, 6vw, 1.65rem);
+  }
+
+  .hero-role {
+    margin-top: -0.2rem;
+    font-size: clamp(1.55rem, 6.4vw, 1.95rem);
+  }
+
+  .hero-role::after {
+    width: 8.6rem;
+    height: 3px;
+    margin-top: 0.5rem;
+  }
+
+  .hero-actions-reference {
+    gap: 0.7rem;
+    margin-top: 1.35rem;
+  }
+
+  .hero-actions-reference .button-primary,
+  .hero-actions-reference .button-secondary {
+    min-width: 7.7rem;
+    min-height: 2.75rem;
+    font-size: 1.14rem;
+  }
+
+  .hero-social-links {
+    gap: 0.75rem;
+    margin-top: 1.2rem;
+  }
+
+  .hero-social-links a {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+
+  .hero-social-links svg {
+    width: 1.82rem;
+    height: 1.82rem;
+  }
+
+  .hero-social-links .icon-github {
+    width: 1.94rem;
+    height: 1.94rem;
+  }
+
+  .hero-social-links .icon-mail {
+    width: 1.96rem;
+    height: 1.96rem;
+  }
+
+  .hero-social-links .icon-instagram {
+    width: 1.78rem;
+    height: 1.78rem;
+  }
+
+  .hero-social-links .icon-linkedin {
+    width: 1.82rem;
+    height: 1.82rem;
+  }
+
+  .hero-greeting,
+  .hero-name,
+  .hero-role,
+  .hero-role::after,
+  .hero-actions-reference {
+    animation: none;
+  }
+
+  .hero-greeting,
+  .hero-role {
+    clip-path: none;
+  }
+
+  .hero-role::after {
+    transform: scaleX(1);
   }
 
   .home-scroll-link {
-    bottom: 1.6rem;
+    bottom: max(1.05rem, env(safe-area-inset-bottom));
+    gap: 0.7rem;
+    font-size: 1.28rem;
+  }
+
+  .home-scroll-arrow {
+    width: 2.65rem;
+    height: 2.65rem;
+    font-size: 1.55rem;
   }
 
   .focus-grid,
@@ -2942,5 +3067,97 @@ button.tag-chip {
 
   .filter-status {
     text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-reference .hero-scene img {
+    object-position: 52% 50%;
+  }
+
+  .hero-reference-content {
+    padding: 1rem 1rem 6.75rem;
+  }
+
+  .hero-reference-content::before {
+    top: 42%;
+    width: 135vw;
+    height: 24rem;
+  }
+
+  .hero-copy {
+    width: min(16.8rem, calc(100vw - 2.2rem));
+    margin-top: -1.25rem;
+  }
+
+  .hero-greeting,
+  .hero-name {
+    width: min(16.8rem, calc(100vw - 2.2rem));
+  }
+
+  .hero-greeting {
+    font-size: clamp(1.18rem, 6.2vw, 1.45rem);
+  }
+
+  .hero-role {
+    font-size: clamp(1.38rem, 6.6vw, 1.72rem);
+  }
+
+  .hero-actions-reference {
+    gap: 0.55rem;
+    margin-top: 1.15rem;
+  }
+
+  .hero-actions-reference .button-primary,
+  .hero-actions-reference .button-secondary {
+    min-width: 6.95rem;
+    min-height: 2.55rem;
+    padding-inline: 0.9rem;
+    font-size: 1.04rem;
+  }
+
+  .hero-social-links {
+    gap: 0.58rem;
+    margin-top: 1rem;
+  }
+
+  .hero-social-links a {
+    width: 2.45rem;
+    height: 2.45rem;
+  }
+
+  .hero-social-links svg {
+    width: 1.58rem;
+    height: 1.58rem;
+  }
+
+  .hero-social-links .icon-github {
+    width: 1.68rem;
+    height: 1.68rem;
+  }
+
+  .hero-social-links .icon-mail {
+    width: 1.7rem;
+    height: 1.7rem;
+  }
+
+  .hero-social-links .icon-instagram {
+    width: 1.55rem;
+    height: 1.55rem;
+  }
+
+  .hero-social-links .icon-linkedin {
+    width: 1.58rem;
+    height: 1.58rem;
+  }
+
+  .home-scroll-link {
+    font-size: 1.08rem;
+  }
+
+  .home-scroll-arrow {
+    width: 2.35rem;
+    height: 2.35rem;
+    font-size: 1.35rem;
   }
 }
