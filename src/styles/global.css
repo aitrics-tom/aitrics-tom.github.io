@@ -397,11 +397,24 @@ main {
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.1;
-  color: #9a6b1f;
+  color: #202228;
   text-shadow:
     0 1px 0 rgba(255, 255, 255, 0.74),
-    0 10px 22px rgba(130, 82, 20, 0.14);
-  animation: heroRoleReveal 700ms ease-out 1500ms both;
+    0 10px 22px rgba(24, 20, 14, 0.08);
+  clip-path: inset(0 100% 0 0);
+  animation: revealRole 1000ms steps(13, end) 1500ms forwards;
+}
+
+.hero-role::after {
+  content: "";
+  display: block;
+  width: 7.8rem;
+  height: 2px;
+  margin: 0.6rem auto 0;
+  background: #f2c84b;
+  transform: scaleX(0);
+  transform-origin: center;
+  animation: roleUnderlineReveal 420ms ease-out 2500ms forwards;
 }
 
 .hero-typing {
@@ -566,10 +579,10 @@ main {
   display: inline-flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.8rem;
+  gap: 1rem;
   color: rgba(255, 255, 255, 0.94);
   font-family: "Cormorant Garamond", var(--display);
-  font-size: 1.4rem;
+  font-size: clamp(1.65rem, 2vw, 1.95rem);
   line-height: 1;
 }
 
@@ -581,14 +594,14 @@ main {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 3.1rem;
+  height: 3.1rem;
   border-radius: 999px;
   border: 1px solid rgba(255, 255, 255, 0.62);
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(10px);
   font-family: var(--body);
-  font-size: 1.5rem;
+  font-size: 1.85rem;
 }
 
 @keyframes heroImageReveal {
@@ -630,6 +643,18 @@ main {
 @keyframes revealGreeting {
   to {
     clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes revealRole {
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes roleUnderlineReveal {
+  to {
+    transform: scaleX(1);
   }
 }
 
