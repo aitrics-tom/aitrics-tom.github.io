@@ -296,6 +296,7 @@ main {
   border-radius: 0;
   border: 0;
   box-shadow: none;
+  background: #fff2cd;
 }
 
 .hero-reference .hero-scene img {
@@ -324,11 +325,27 @@ main {
   padding: 2rem;
 }
 
+.hero-reference-content::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 44%;
+  z-index: -1;
+  width: min(760px, 72vw);
+  height: min(430px, 46vh);
+  border-radius: 999px;
+  background: radial-gradient(ellipse at center, rgba(255, 246, 220, 0.58), rgba(255, 246, 220, 0.28) 45%, rgba(255, 246, 220, 0) 76%);
+  filter: blur(2px);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
+
 .hero-copy {
   display: grid;
   justify-items: center;
-  width: min(61rem, calc(100% - 2rem));
+  width: min(45rem, calc(100% - 2rem));
   margin-top: 1rem;
+  padding-inline: 1.5rem;
   animation: heroCopyReveal 900ms ease-out 360ms both;
 }
 
@@ -432,22 +449,26 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1.55rem;
-  margin-top: 1.7rem;
+  gap: 1.15rem;
+  margin-top: 1.55rem;
 }
 
 .hero-social-links a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 3.35rem;
-  height: 3.35rem;
+  width: 3.05rem;
+  height: 3.05rem;
   color: #202228;
   padding: 0;
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.035);
-  border: 1px solid transparent;
-  box-shadow: none;
+  border-radius: 999px;
+  background: rgba(255, 248, 229, 0.42);
+  border: 1px solid rgba(92, 64, 23, 0.14);
+  box-shadow:
+    0 10px 24px rgba(38, 30, 20, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.42);
+  backdrop-filter: blur(10px) saturate(1.08);
+  -webkit-backdrop-filter: blur(10px) saturate(1.08);
   transition:
     transform 160ms ease,
     background 160ms ease,
@@ -457,8 +478,8 @@ main {
 
 .hero-social-links svg {
   display: block;
-  width: 2.45rem;
-  height: 2.45rem;
+  width: 2.05rem;
+  height: 2.05rem;
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-width: 2.15;
@@ -472,25 +493,25 @@ main {
 }
 
 .hero-social-links .icon-github {
-  width: 2.58rem;
-  height: 2.58rem;
+  width: 2.18rem;
+  height: 2.18rem;
 }
 
 .hero-social-links .icon-mail {
-  width: 2.6rem;
-  height: 2.6rem;
+  width: 2.22rem;
+  height: 2.22rem;
   stroke-width: 2.35;
 }
 
 .hero-social-links .icon-instagram {
-  width: 2.42rem;
-  height: 2.42rem;
+  width: 2.02rem;
+  height: 2.02rem;
   stroke-width: 2.1;
 }
 
 .hero-social-links .icon-linkedin {
-  width: 2.45rem;
-  height: 2.45rem;
+  width: 2.05rem;
+  height: 2.05rem;
   fill: currentColor;
 }
 
@@ -507,33 +528,33 @@ main {
 
 .hero-social-links a:hover {
   color: #111317;
-  background: rgba(255, 255, 255, 0.16);
-  border-color: rgba(32, 34, 40, 0.08);
+  background: rgba(255, 248, 229, 0.62);
+  border-color: rgba(92, 64, 23, 0.22);
   box-shadow:
-    0 10px 24px rgba(28, 24, 18, 0.045),
-    inset 0 1px 0 rgba(255, 255, 255, 0.36);
+    0 14px 28px rgba(38, 30, 20, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
   transform: translateY(-2px);
 }
 
 .hero-actions-reference {
-  gap: 1.45rem;
+  gap: 1rem;
   margin-top: 1.9rem;
   justify-content: center;
   animation: heroControlsReveal 700ms ease-out 1700ms both;
 }
 
 .hero-actions-reference .button-primary {
-  min-width: 9.8rem;
-  min-height: 3.55rem;
-  background: #f2c84b;
-  border: 1px solid rgba(119, 82, 14, 0.18);
-  border-radius: 18px;
-  color: #241b08;
+  min-width: 9rem;
+  min-height: 3rem;
+  background: #202228;
+  border: 1px solid rgba(32, 34, 40, 0.72);
+  border-radius: 999px;
+  color: #fff7df;
   box-shadow:
-    0 14px 28px rgba(120, 80, 20, 0.12),
-    inset 0 1px 0 rgba(255, 255, 255, 0.34);
+    0 14px 26px rgba(31, 27, 19, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
   font-family: "Cormorant Garamond", var(--display);
-  font-size: 1.4rem;
+  font-size: 1.28rem;
   font-weight: 600;
   letter-spacing: 0.01em;
   text-shadow: none;
@@ -542,31 +563,39 @@ main {
 }
 
 .hero-actions-reference .button-secondary {
-  min-width: 9.8rem;
-  min-height: 3.55rem;
-  background: #f2c84b;
-  border: 1px solid rgba(119, 82, 14, 0.18);
-  border-radius: 18px;
-  color: #241b08;
+  min-width: 9rem;
+  min-height: 3rem;
+  background: rgba(255, 248, 229, 0.52);
+  border: 1px solid rgba(92, 64, 23, 0.24);
+  border-radius: 999px;
+  color: #202228;
   box-shadow:
-    0 14px 28px rgba(120, 80, 20, 0.12),
-    inset 0 1px 0 rgba(255, 255, 255, 0.34);
+    0 12px 24px rgba(38, 30, 20, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.44);
   font-family: "Cormorant Garamond", var(--display);
-  font-size: 1.4rem;
+  font-size: 1.28rem;
   font-weight: 600;
   letter-spacing: 0.01em;
   text-shadow: none;
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
+  backdrop-filter: blur(10px) saturate(1.08);
+  -webkit-backdrop-filter: blur(10px) saturate(1.08);
 }
 
-.hero-actions-reference .button-primary:hover,
-.hero-actions-reference .button-secondary:hover {
-  background: #e9b93b;
-  border-color: rgba(119, 82, 14, 0.3);
+.hero-actions-reference .button-primary:hover {
+  background: #111317;
+  border-color: rgba(17, 19, 23, 0.78);
   box-shadow:
-    0 18px 34px rgba(120, 80, 20, 0.16),
-    inset 0 1px 0 rgba(255, 255, 255, 0.36);
+    0 18px 34px rgba(31, 27, 19, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.hero-actions-reference .button-secondary:hover {
+  background: rgba(255, 248, 229, 0.72);
+  border-color: rgba(92, 64, 23, 0.34);
+  box-shadow:
+    0 16px 32px rgba(38, 30, 20, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
   transform: translateY(-2px);
 }
 
@@ -602,6 +631,14 @@ main {
   backdrop-filter: blur(10px);
   font-family: var(--body);
   font-size: 1.85rem;
+  animation: scrollArrowPulse 2.8s ease-in-out 2.6s infinite;
+}
+
+.hero-actions-reference a:focus-visible,
+.hero-social-links a:focus-visible,
+.home-scroll-link:focus-visible {
+  outline: 2px solid #8f651f;
+  outline-offset: 3px;
 }
 
 @keyframes heroImageReveal {
@@ -658,6 +695,17 @@ main {
   }
 }
 
+@keyframes scrollArrowPulse {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(5px);
+  }
+}
+
 @keyframes signatureReveal {
   from {
     opacity: 0;
@@ -669,6 +717,29 @@ main {
     opacity: 1;
     transform: translateY(0) scale(1);
     filter: blur(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-reference .hero-scene img,
+  .hero-reference .hero-scene-overlay,
+  .hero-copy,
+  .hero-greeting,
+  .hero-name,
+  .hero-role,
+  .hero-role::after,
+  .hero-actions-reference,
+  .home-scroll-arrow {
+    animation: none !important;
+  }
+
+  .hero-greeting,
+  .hero-role {
+    clip-path: none;
+  }
+
+  .hero-role::after {
+    transform: scaleX(1);
   }
 }
 
